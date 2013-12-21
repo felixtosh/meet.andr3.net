@@ -1,0 +1,9 @@
+{
+  "name": "andr3.net",
+  "version": "0.0.1",
+  "dependencies": {},
+  "devDependencies": {
+    "jquery2": "~2.0.0",
+    "modernizr": "~2.7.1"
+  }
+}
