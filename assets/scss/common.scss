@@ -1,0 +1,30 @@
+/* Stuff which can be used wherever, whenever. */
+@import "config";
+
+.tags {
+    li {
+        list-style: none;
+        display: inline-block;
+        vertical-align: top;
+        color: #666;
+        text-transform: uppercase;
+        font-size: 0.8em;
+
+        &:before {
+            content: "#";
+        }
+    }
+}
+
+header {
+    text-align: center;
+    line-height: 2;
+    padding: 10% 0;
+    background: $primary;
+
+    h1 {
+        font-size: 2rem;
+        text-align: center;
+        text-transform: lowercase;
+    }
+}
