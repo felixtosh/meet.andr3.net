@@ -59,7 +59,7 @@ module.exports = function (grunt) {
             },
             css: {
                 files: ["assets/scss/*.scss"],
-                tasks: ["sass"],
+                tasks: ["sass","concat", "autoprefixer"],
                 options: {
                     spawn: false
                 }
