@@ -5,6 +5,8 @@
   "devDependencies": {
     "jquery2": "~2.0.0",
     "modernizr": "~2.7.1",
-    "stickem": "~1.4.1"
+    "stickem": "~1.4.1",
+    "normalize-css": "~2.1.3",
+    "animate.css": "~3.0.0"
   }
 }
