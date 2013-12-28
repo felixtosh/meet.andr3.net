@@ -1,3 +1,5 @@
+@import "config";
+
 * {
     margin: 0;
     padding: 0;
@@ -5,11 +7,93 @@
 }
 
 
-.pillow {
+.pillow,
+hr {
     width: 80%;
     margin: 0 auto;
+
+    @media (min-width: 1300px) {
+        width: 80%;
+    }
+}
+
+hr {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    border: 0;
+    color: transparent;
+    border-top: 2px solid $color1;
 }
 
 body {
-    font-family: sans-serif;
+    font-family: 'freightsans pro', sans-serif;
+    line-height: 1.5;
+    font-size: 1.2rem;
+    color: #222;
+    @media (min-width: 480px) {
+        font-size: 1.4rem;
+    }
+}
+
+
+p,
+li {
+    margin-bottom: 1em;
+}
+
+.t-stone {
+    display: block;
+}
+
+.t-light {
+    opacity: 0.5;
+}
+
+.t-center {
+    text-align: center;
+
+    p {
+        max-width: none;
+    }
+}
+/* Hide stuff from visual users but allow it to be picked up by (Assist)ive Technologies */
+.t-assist {
+    position: absolute;
+    left: -9999em;
+    font-size: 0;
+    opacity: 0;
+    width: 0px;
+    height: 0px;
+    pointer-events: none;
+}
+
+a {
+    color: $color1;
+    text-decoration: none;
+    transition: color 0.2s linear;
+
+    &:hover {
+        color: $color3;
+    }
+}
+
+h2,
+h3,
+h4 {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin-bottom: 0.5em;
+    color: $color3;
+    line-height: .9;
+}
+
+h2 {
+    font-size: 1.8em;
+}
+h3 {
+    font-size: 1.2em;
+}
+h4 {
+    font-size: 1em;
 }

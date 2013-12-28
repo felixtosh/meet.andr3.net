@@ -6,8 +6,14 @@
 
         <meta name="viewport" content="width=device-width">
 
-        <link rel="stylesheet" href="build/css/base.css">
-        <link rel="stylesheet" href="build/css/common.css">
+        <link rel="stylesheet" href="/vendor/normalize-css/normalize.css">
+        <link rel="stylesheet" href="/vendor/animate.css/animate.css">
+        <link rel="stylesheet" href="/build/css/base.css">
+        <link rel="stylesheet" href="/build/css/common.css">
+        <link rel="stylesheet" href="/build/css/icons.css">
+        <link rel="stylesheet" href="/build/css/content.css">
+
+        <link rel="stylesheet" href="/build/css/debug.css">
 
         <!-- production
         <link rel="stylesheet" href="build/css/all.prefixed.css">
@@ -15,43 +21,303 @@
 
         <script src="/vendor/modernizr/modernizr.js"></script>
     </head>
-    <body>
+    <body class="vcard">
+        <div class="debug">
+            <ul class="colors">
+                <li class="color color1"></li>
+                <li class="color color2"></li>
+                <li class="color color3"></li>
 
+                <li class="color color1aux"></li>
+                <li class="color color2aux"></li>
+                <li class="color color3aux"></li>
+
+                <li class="color color1inv"></li>
+                <li class="color color2inv"></li>
+                <li class="color color3inv"></li>
+            </ul>
+            <ul class="fonts">
+                <li class="font1">The five boxing wizards jump quickly.</li>
+            </ul>
+        </div>
         <header>
             <div class="pillow">
+                <div data-icon="dr3-logo"></div>
                 <h1>
-                    <span>Meet.</span>
-                    <span>andr3.</span>
+                    <span class="fadeInDown animated">Meet</span>
+                    <span class="fn fadeInDown animated">André <span>Luís</span></span>
+                    <span class="nickname fadeInDown animated"><abbr title="also known as">aka</abbr> andr3</span>
                 </h1>
 
-                <p>The Web Nerd.</p>
+                <p class="tagline fadeInUp animated"><del>A</del> <ins>The</ins> Web Nerd</p>
 
-                <ul class="tags">
-                    <li>frontend</li>
-                    <li>webdesign</li>
-                    <li>user-centered design</li>
-                    <li>accessibility</li>
-                    <li>semantics</li>
-                    <li>rwd</li>
-                    <li>futurefriendly</li>
-                </ul>
             </div>
         </header>
 
-        <h2>Journey Guide</h2>
-        <nav>
-            <ul>
-                <li><a href="#lately">Lately</a></li>
-                <li><a href="#recently">Recently</a></li>
-                <li><a href="#how-did-he-become-him">How did he become him?</a></li>
-            </ul>
-        </nav>
+        <main>
+            <section class="intro">
+                <div>
+                    <div class="pillow">
+                        <h2 class="assist">Introduction</h2>
 
-        <section id="lately">
-            <h2>Lately</h2>
+                        <p>A <abbr title="31 years old">31y old</abbr> web nerd hailing from Lisbon with an overflowing desire to build digital products that make the lives of a lot of people a bit better.</p>
 
-        </section>
+                        <h3>In a nutshell</h3>
+                        <ul class="tags">
+                            <li>frontend</li>
+                            <li>webdesign</li>
+                            <li>user-centered design</li>
+                            <li>accessibility</li>
+                            <li>semantics</li>
+                            <li>rwd</li>
+                            <li>futurefriendly</li>
+                        </ul>
+                    </div>
+                </div>
 
+                <div>
+                    <div class="pillow">
+                        <blockquote class="quote t-big">
+                            <p>An engineer by training yet a designer by heart.</p>
+                            <p class="quote--sig"><small>&mdash; André</small></p>
+                        </blockquote>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="pillow">            
+
+                        <h2>The beginning</h2>
+
+                        <p>He has been in love with the web ever since he laid eyes on the wonders of the <em>bleeding edge</em> in browsing technology, back in 1998: <strong>IE 2.0</strong>. <abbr lang="webish" title="Who would have thought">Whodathunkit</abbr> he would be making a living out of what happened inside that chrome 15 years later? <em class="t-stone t-light">Certainly not that 16 years old teen, that's for sure.</em></p>
+
+                        <p>But let's fast-forward to today, shall we?</p>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="pillow">
+
+                        <h2>Today</h2>
+
+                        <p><strong>André is now a mature front-end engineer with an acute concern for elegant and purposeful design.</strong> Coming up with delightful solutions through a user-centred approach drives him to pursue simplicity, with enough complexity within users' effortless grasp.</p>
+
+                        <p>He's also grown quite fond of climbing onto a stage and speaking to his fellow colleagues and sharing best-practices and experiences.</p>
+
+                    </div>
+                </div>
+
+            </section>
+
+            <div class="bridge">
+                <div class="pillow t-center">
+
+                    <h2>How did he get here?</h2>
+
+                    <p>Explore his path. <strong>Discover the web nerd.</strong></p>
+      
+                    <h2 class="t-assist">Journey Guide</h2>
+                    <nav>
+                        <ul class="inline-anchors">
+                            <li><a href="#startups">Startups</a></li>
+                            <li><a href="#futurefriendly">Future Friendly</a></li>
+                            <li><a href="#quality">Quality</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
+            <section id="startups" class="section">
+                <div class="pillow">
+
+                    <h2>
+                        <span class="section--year">2013</span>
+                        <span class="section--title">The Startup World</span>
+                    </h2>
+                    <div class="section--meta">
+                        <ul>
+                            <li><a href="http://www.uniplaces.com/">UniPlaces.com</a></li>
+                            <li>
+                                <abbr class="dtstart" title="2013-04-01">April 2013</abbr>
+                                to
+                                <abbr class="dtend" title="2014-01-01">December 2013</abbr>
+                            </li>
+                            <li>
+                                ~30 employees
+                            </li>
+                        </ul>
+                    </div>
+
+                    <p>Leaping at the opportunity of being part of a young and promising team building a useful product from sunny Lisbon, André joined the early ranks of <a href="http://www.uniplaces.com">UniPlaces</a> in April 2013 to lead the front-end development and assist in proving the validity of the pivot in the business model through a user-centered effort.</p>
+
+                    <p>The effort came into frution when, 7 months later, the company successfuly raised $1,000,000 from Octopus Investments, with a track record of impressive growth supported by the launch of the MVP in June and maturity over the next months.</p>
+
+                    <h3>About the company</h3>
+
+                    <p>UniPlaces is an online platform that connects students with accommodation providers and facilitates the renting process. Currently operating in Lisbon and London.</p>
+
+                    <h3>Highlighted work</h3>
+
+                    <ol>
+                        <li>
+                            <strong class="t-stone">Student Website</strong>
+                            <a href="http://www.uniplaces.com/">uniplaces.com</a>
+                        </li>
+                        <li>
+                            <strong class="t-stone">UniPlaces Pattern Library</strong>
+                            <a href="http://www.uniplaces.com/eng/pattern-library">uniplaces.com/eng/pattern-library</a>
+                        </li>
+                    </ol>
+
+                    <ul class="tags section--tags">
+                        <li>startup</li>
+                        <li>frontend</li>
+                        <li>user-centered design</li>
+                        <li>ux</li>
+                    </ul>
+                </div>
+            </section>
+
+            <hr>
+
+            <section id="futurefriendly" class="section">
+                <div class="pillow">
+
+                    <h2>
+                        <span class="section--year">2012</span>
+                        <span class="section--title">The Future Friendly Awakening</span>
+                    </h2>
+                    <div class="section--meta">
+                        <ul>
+                            <li><a href="http://www.sapo.pt/">SAPO.pt</a></li>
+                            <li>
+                                <abbr class="dtstart" title="2012">2012</abbr>
+                                to
+                                <abbr class="dtend" title="2013-04-01">March 2013</abbr>
+                            </li>
+                            <li>
+                                ~300 employees
+                            </li>
+                        </ul>
+                    </div>
+
+                    <p>André had been working at <a href="http://www.sapo.pt"><abbr title="Serviço de Apontadores POrtugueses">SAPO</abbr></a>&mdash;a local company to the likes of Yahoo!&mdash;for 4 years when he was challenged to be part of the team as Lead Front-end Engineer that would go ahead to redesign the #1 most visited website produced in Portugal: <a href="http://www.sapo.pt">www.sapo.pt</a>.</p>
+
+                    <p>With <abbr title="30 million">30M</abbr> monthly visits, its audience made it incredibly challenging to deliver not only a Responsive solution, but a future-friendly one: resolution-independent, device and browser agnostic but also usable and enjoyable. It strived to be a modern example of bleeding edge good practices but also universally accessible as much as possible.</p>
+
+                    <p>He also worked closely with the sales team on defining, designing and implementing an unobtrusive commercial solution to a high-impact multimedia responsive ad format that allowed advertisers to reach audiences that were until then restricted to small almost static graphic banners (mobile formats).</p>
+
+                    <h3>About the company</h3>
+
+                    <p>SAPO is a web company born out of the 90s portals. It has grown to become the most important and most used network of content-producing websites in Portugal.</p>
+
+                    <h3>Highlighted work</h3>
+
+                    <ol>
+                        <li>
+                            <strong class="t-stone">Responsive Web Portal</strong>
+                            <a href="http://www.sapo.pt/">sapo.pt</a> (Ed. 2012 - now)
+                        </li>
+                        <li>
+                            <strong class="t-stone">Multimedia High-impact Responsive Ad Format</strong>
+                            <a href="https://dl.dropboxusercontent.com/u/636550/UI/HP/Demo%20Takeover.mov">Watch a Screencast</a> (21.3<abbr title="Megabyte">MB</abbr> video)
+                        </li>
+                        <li>
+                            <strong class="t-stone">Slides about the Technical Challenges (Presented at ESAD)</strong>
+                            <a hreF="http://www.slideshare.net/andr3/pdf-responsive-webdesign-umahistoriadastrincheiras">Responsive Web: A story from the Trenches</a> (in Portuguese)
+                        </li>
+                    </ol>
+
+                    <ul class="tags section--tags">
+                        <li>futurefriendly</li>
+                        <li>frontend</li>
+                        <li>responsive</li>
+                        <li>mobile ads</li>
+                        <li>mobilefirst</li>
+                        <li>svg</li>
+                    </ul>
+                </div>
+            </section>
+
+            <hr>
+
+
+            <section id="futurefriendly" class="section">
+                <div class="pillow">
+
+                    <h2>
+                        <span class="section--year">2010 to 2012</span>
+                        <span class="section--title">The Quality Phase</span>
+                    </h2>
+                    <div class="section--meta">
+                        <ul>
+                            <li><a href="http://www.sapo.pt/">SAPO.pt</a></li>
+                            <li>
+                                <abbr class="dtstart" title="2010">2010</abbr>
+                                to
+                                <abbr class="dtend" title="2012">2012</abbr>
+                            </li>
+                            <li>
+                                ~300 employees
+                            </li>
+                        </ul>
+                    </div>
+
+                    <blockquote class="quote t-big">
+                        <p>Be a yardstick of quality. Some people aren't used to an environment where excellence is expected.</p>
+                        <p class="quote--sig"><small>&mdash; Steve Jobs</small></p>
+                    </blockquote>
+
+
+                    <p>This is the phase where he honed the lover of Quality. By conducting dozens of user-tests (some of which changed his perception of technology) he honed the art of listening in on users' thoughts as they use a product.</p>
+
+                    <p>Also worked as a Quality Assurance engineer, in which he conducted constant heuristic reviews, performance load testing to assess whether projects from all areas in the company were fit for launch.</p>
+
+                    <h3>About the company</h3>
+
+                    <p>SAPO is a web company born out of the 90s portals. It has grown to become the most important and most used network of content-producing websites in Portugal.</p>
+
+                    <h3>Highlighted work</h3>
+
+                    <ul>
+                        <li>
+                            The entirety of this work was conducted internally, so very few traces are visible from this era.
+                        </li>
+                    </ul>
+
+                    <ul class="tags section--tags">
+                        <li>web</li>
+                        <li>mobile</li>
+                        <li>usability</li>
+                        <li><abbr title="interaction design">IxD</abbr></li>
+                        <li>accessibility</li>
+                        <li>quality assurance</li>
+                        <li><abbr title="user experience">UX</abbr></li>
+                        <li>documentation</li>
+                        <li>training</li>
+                    </ul>
+                </div>
+            </section>
+
+            <hr>
+
+
+        </main>
+
+        <footer>
+            <div class="pillow">
+                <p>
+                    <small>
+                        &copy; 
+                        <abbr title="Creative Commons Attribution Non-commercial Share-alike">
+                            cc-by-nc-sa
+                        </abbr>
+                        &middot; Some rights reserved &middot; <a href="./">André Luís</a>
+                    </small>
+                </p>
+            </div>
+        </footer>
+        
         <!-- Production 
         <script src="/build/production.min.js"></script>
         -->

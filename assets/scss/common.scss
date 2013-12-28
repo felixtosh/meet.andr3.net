@@ -2,13 +2,20 @@
 @import "config";
 
 .tags {
+    text-align: left;
+
     li {
         list-style: none;
         display: inline-block;
         vertical-align: top;
-        color: #666;
-        text-transform: uppercase;
-        font-size: 0.8em;
+        color: #888;
+        text-transform: lowercase;
+        font-size: 0.85em;
+        margin-right: 0.5em;
+        border: 1px solid #888;
+        color: $color3;
+        padding: 0.2em 0.5em;
+        letter-spacing: 1px;
 
         &:before {
             content: "#";
@@ -19,12 +26,170 @@
 header {
     text-align: center;
     line-height: 2;
-    padding: 10% 0;
-    background: $primary;
+    padding: 5% 0;
+    background: $color1_aux;
+    color: $color1;
 
     h1 {
-        font-size: 2rem;
+        font-size: 4rem;
         text-align: center;
-        text-transform: lowercase;
+        text-transform: uppercase;
+        line-height: 1;
+
+        .fn {
+            font-weight: 400;
+            color: $color1_dark;
+            white-space: nowrap;
+            @media (max-width: 440px) {
+                white-space: normal;
+            }
+
+            span {
+                font-weight: bold;
+            }
+        }
+        .nickname {
+            font-weight: 400;
+            display: block;
+            font-size: 0.4em;
+            text-align: center;
+            text-transform: lowercase;
+            text-indent: 16em;
+            @media (max-width: 650px) {
+                text-indent: 0;
+            }
+        }
+        abbr[title] {
+            border: none;
+        }
+    }
+    .tagline {
+        word-spacing: 1em;
+        letter-spacing: 0.3em;
+        color: $color1;
+        text-transform: uppercase;
+        line-height: 1;
+
+        del {
+            position: absolute;
+            opacity: 1;
+        }
+        ins {
+            opacity: 0;
+            font-style: italic;
+            display: block;
+        }
+        body:hover & {
+            del {
+                opacity: 0;
+            }
+            ins {
+                opacity: 1;
+            }
+        }
+        del,
+        ins {
+            margin-left: -0.7em;
+            text-decoration: none;
+            font-size: 0.85em;
+            letter-spacing: -1px;
+            transition: opacity 2s;
+        }
     }
 }
+
+
+blockquote {
+    &.t-big {
+        font-size: 1.5em;
+        padding: 0;
+        line-height: 1.2;
+        margin: 0 auto;
+    }
+    > * {
+        &:nth-last-child(n+2) {
+            &:before {
+                content: "«";   
+                margin-right: 0.25em;
+            }
+            &:after {
+                content: "»";
+                margin-left: 0.25em;
+            }
+        }
+
+        &:last-child {
+            margin-top: -1em;
+        }
+    }
+}
+
+main p {
+    max-width: 40em;
+}
+
+.intro > * {
+    padding: 5% 0;
+
+    &:nth-child(2n+2) {
+        background: $color3_aux;
+        color: #222;
+    }
+}
+.bridge {
+    .pillow {
+        padding: 5% 0;
+        border-bottom: 2px solid $color3;
+    }
+}
+.inline-anchors {
+    text-align: center;
+
+    &:before {
+        content: "Eras: ";
+        opacity: 0.5;
+        margin-right: 1em;
+        text-transform: uppercase;
+        font-size: 0.8em;
+        display: block;
+
+        @media (min-width: 600px) {
+            display: inline-block;
+        }
+    } 
+
+    li {
+        display: block;
+        margin: 0;
+
+        a {
+            color: $color2;
+            display: block;
+            padding: 0.25em 0.5em;
+
+            &:before {
+                font-weight: 400;
+                font-size: 0.8em;
+                margin-right: 0.5em;
+            }
+        }
+        @media (min-width: 600px) {
+            display: inline-block;
+            vertical-align: top;
+
+            + li {
+                &:before {
+                    content: '\00B7';
+                    margin: 0 0.5em;
+                    font-weight: bold;
+                    color: $color1;
+                }
+            }
+            a[href] {
+                display: inline;
+                padding: 0;
+            }
+        }
+    }
+}
+

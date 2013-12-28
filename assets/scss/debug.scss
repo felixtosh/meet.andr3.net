@@ -1,0 +1,58 @@
+@import "config";
+
+.debug > * {
+    display: inline-block;
+    vertical-align: top;
+    line-height: 3;
+
+    li {
+        list-style: none;
+    }
+}
+.colors {
+    word-spacing: 0;
+    font-size: 0;
+    padding-left: 0.5rem;
+}
+.color {
+    font-size: 1rem;
+    width: 4em;
+    height: 4em;
+    display: inline-block;
+    border-radius: 100em;
+    margin-left: -0.5em;
+}
+    .color1 {
+        background: $color1;
+    }
+    .color2 {
+        background: $color2;
+    }
+    .color3 {
+        background: $color3;
+    }
+    .color1aux {
+        background: $color1_aux;
+    }
+    .color2aux {
+        background: $color2_aux;
+    }
+    .color3aux {
+        background: $color3_aux;
+    }
+    .color1inv {
+        background: $color1_inv;
+    }
+    .color2inv {
+        background: $color2_inv;
+    }
+    .color3inv {
+        background: $color3_inv;
+    }
+
+.font {
+
+}
+    .font1 {
+        font-family: "freightsans pro";
+    }

@@ -1,0 +1,31 @@
+/* Icons to be used wherever whenever */
+@import "config";
+
+/**
+ * Icons font file created with IcoMoon.io
+ */
+@font-face {
+    font-family: 'andr3-icos';
+    src: url(/assets/fonts/icomoon.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[data-icon] {
+    font-family: 'andr3-icos';
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    line-height: 1;
+
+    &[data-icon=dr3-logo] {
+        font-size: 5em;
+        background: white;
+        padding: .25em;
+        border-radius: 5em;
+
+        &:before {
+            content: "\e000";
+        }
+    }
+}

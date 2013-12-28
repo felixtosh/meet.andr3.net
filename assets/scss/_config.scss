@@ -1,2 +1,13 @@
 // Variables
-$primary: #008aca;
+$color1: #E82F5C;
+    $color1_inv: #EBEBEB;
+    $color1_aux: #FAD5BE;
+    $color1_dark: darken($color1, 25%);
+    $color1_light: lighten($color1, 15%);
+$color2: #1388B5;
+    $color2_inv: #EBEBEB;
+    $color2_aux: #AFDCFF;
+$color3: #5E6263;
+    $color3_inv: #EBEBEB;
+    $color3_aux: #BDC6C9;
+$color4: #FAD5BE;

@@ -1,0 +1,42 @@
+/* Pieces of content */
+@import "config";
+
+.section--year {
+    opacity: 0.4;
+    font-size: 1.4em;
+    float: right;
+    line-height: 1;
+    margin-left: 1em;
+}
+
+.section--meta {
+    font-size: 0.8em;
+    color: #666;
+    margin-top: -1em;
+
+    > ul {
+        text-align: left;
+
+        > li {
+            display: inline-block;
+            vertical-align: top;
+
+            + li:before {
+                content: '\00B7';
+                font-size: 1em;
+                font-weight: bold;
+                color: #222;
+                margin: 0 0.5em;
+            }
+        }
+    }
+}
+
+.section--title {
+    font-size: 2em;
+    line-height: .8;
+}
+
+.section {
+    padding-top: 4em;
+}
