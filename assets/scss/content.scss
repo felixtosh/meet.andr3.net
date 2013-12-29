@@ -3,10 +3,23 @@
 
 .section--year {
     opacity: 0.4;
-    font-size: 1.4em;
+    font-size: 1em;
     float: right;
     line-height: 1;
     margin-left: 1em;
+    text-transform: lowercase;
+    margin-top: 20px;
+
+    .section--year--to {
+        font-size: 0.5em;
+        position: relative;
+        top: -0.35em;
+    }
+}
+
+.section--title {
+    font-size: 1.4em;
+    line-height: 1;
 }
 
 .section--meta {
@@ -30,13 +43,150 @@
             }
         }
     }
+
+    @media (max-width: 480px) {
+        ul li {
+            display: block;
+            margin: 0;
+
+            &:before {
+                display: none;
+            }
+        }
+    }
 }
 
-.section--title {
-    font-size: 2em;
-    line-height: .8;
+main {
+    counter-reset: figcount;
+    overflow-x: hidden;
 }
 
 .section {
     padding-top: 4em;
+    max-width: 49em;
+    margin-left: auto;
+    margin-right: auto;
+
+    h3 {
+        margin-top: 2em;
+    }
+    @media (max-width: 480px) {
+        h2 {
+            font-size: 1.4em;    
+        }
+    }
+
+    /* Centered title */
+    &.section__centered {
+        h2 {
+            max-width: 22.4em;
+            text-align: center;
+
+            .section--year {
+                float: none;
+                display: block;
+                margin: 0;
+
+                &:before,
+                &:after {
+                    content: "\2692";
+                    margin: 0 0.5em;
+                }
+            }
+        }
+        .section--meta {
+            max-width: 50em;
+            text-align: center;
+            margin: 0 0 1em;
+
+            * {
+                text-align: inherit;                
+            }
+        }
+    }
+    > .pillow {
+        > p:first-of-type:first-letter {
+            font-size: 3.24em;
+            float: left;
+            margin-top: -0.29em;
+            margin-right: 0.1em;
+            margin-bottom: 0;
+            height: 1em;
+            overflow: visible;
+            font-weight: 300;
+        }
+        > aside {
+            width: 30%;
+            float: right;
+            margin-right: -5%;
+            margin-left: 2.5%;
+            font-size: 0.8em;
+
+            h3 {
+                margin: 0 0 0.25em;
+            }
+        }
+    }
+
+    figure {
+        margin-bottom: 2em;
+        counter-increment: figcount;
+        text-align: center;
+
+        &.t-wide {
+            img,
+            video {
+                margin-left: -15%;
+                margin-right: -15%;
+                max-width: 130%;
+                outline: 1px solid #333;
+
+                @media (max-width: 480px) {
+                    width: 130%;
+                }
+            }
+        }
+        figcaption {
+            text-align: center;
+            color: #777;
+            font-size: 0.7em;
+            line-height: 1.2;
+            padding: 0.25em 0;
+
+            &:before {
+                content: "#" counter(figcount) ":";
+                margin-right: 0.5em;
+                color: #aaa;
+            }
+        }
+    }
+}
+
+
+
+.list-of-mentors {
+    font-size: 0;
+
+    > li {
+        font-size: 1.4rem;
+        display: inline-block;
+        vertical-align: top;
+        width: 33.333%;
+        box-sizing: border-box;
+        text-align: center;
+        padding-right: 1.5%;
+        padding-left: 1.5%;
+        line-height: 1;
+        margin-bottom: 2em;
+
+        &:nth-child(2n+1) {
+            padding-right: 0;
+        }
+        &:last-child {
+            display: block;
+            margin-top: 2em;
+            color: #999;
+            width: auto;
+        }
+    }
 }

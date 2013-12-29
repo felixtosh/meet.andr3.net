@@ -33,7 +33,6 @@ header {
     h1 {
         font-size: 4rem;
         text-align: center;
-        text-transform: uppercase;
         line-height: 1;
 
         .fn {
@@ -99,9 +98,15 @@ header {
 }
 
 
-blockquote {
+blockquote.quote {
+    font-style: italic;
+    font-size: 1.3em;
+    margin-left: 5%;
+    max-width: 28.5em;
+    line-height: 1;
+
     &.t-big {
-        font-size: 1.5em;
+        font-size: 1.7em;
         padding: 0;
         line-height: 1.2;
         margin: 0 auto;
@@ -110,11 +115,11 @@ blockquote {
         &:nth-last-child(n+2) {
             &:before {
                 content: "«";   
-                margin-right: 0.25em;
+                margin-right: 0.1em;
             }
             &:after {
                 content: "»";
-                margin-left: 0.25em;
+                margin-left: 0.1em;
             }
         }
 
