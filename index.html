@@ -14,6 +14,14 @@
         <link rel="stylesheet" href="/build/css/icons.css">
         <link rel="stylesheet" href="/build/css/content.css">
 
+        <!-- Small -->
+        <link rel="stylesheet" href="/build/css/s-small.css" media="only screen and (max-width: 480px)">
+        <!-- Medium -->
+        <link rel="stylesheet" href="/build/css/m-medium.css" media="only screen and (min-width: 481px) and (max-width: 900px)">
+        <!-- Large -->
+        <link rel="stylesheet" href="/build/css/l-large.css" media="only screen and (min-width: 901px)">
+
+
         <link rel="stylesheet" href="/build/css/debug.css">
 
         <!-- production
@@ -22,10 +30,25 @@
 
         <script src="/vendor/modernizr/modernizr.js"></script>
 
-        <script type="text/javascript" src="//use.typekit.net/cld0xzo.js"></script>
+        <script type="text/javascript" src="//use.typekit.net/dvi6aob.js"></script>
         <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+        <script>
+            var vh = document.documentElement.clientHeight;
+            document.write('<style>.ratio[data-ratio=one-screen][class] { min-height: ' + vh +'px; }</style>');
+        </script>
+
+        <!-- You're so meta! -->
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:site" content="@andr3">
+        <meta name="twitter:title" content="Meet... @andr3!">
+        <meta name="twitter:description" content="Available for hire (freelancer and permanent). Discover the story of the web nerd. #frontend #ux">
+        <meta name="twitter:creator" content="@andr3">
+        <meta name="twitter:image:src" content="http://meet.andr3.net/assets/imgs/andr3-circle.png">
+        <meta name="twitter:domain" content="meet.andr3.net">
+
     </head>
-    <body class="vcard tk-dagny">
+    <body class="vcard" data-reading-mode="quick">
 <!--
         <div class="debug">
             <ul class="colors">
@@ -47,26 +70,24 @@
         </div>
 -->
         <header>
-            <div class="pillow">
-                <div data-icon="dr3-logo"></div>
-                <h1>
-                    <span class="fadeInDown animated">Meet</span>
-                    <span class="fn fadeInDown animated">André <span>Luís</span></span>
-                    <span class="nickname fadeInDown animated"><abbr title="also known as">aka</abbr> andr3</span>
-                </h1>
-
-                <p class="tagline fadeInUp animated"><del>A</del> <ins>The</ins> Web Nerd</p>
-
-            </div>
-        </header>
-
-        <main>
-            <section class="intro">
-                <div>
-                    <div class="pillow">
+            <div class="pillow ratio" data-ratio="one-screen">
+                <div class="box">
+                    <div data-icon="dr3-logo"></div>
+                    <h1>
+                        <span class="animation-step-1" data-animation="fadeInDown">Meet</span>
+                        <span class="who">
+                            <span class="fn animation-step-2" data-animation="fadeIn">André <span>Luís</span></span>
+                            <span class="nickname animation-step-3" data-animation="fadeInDown"><abbr title="also known as">aka</abbr> andr3</span>
+                        </span>
+                    </h1>
+<!--
+                    <p class="tagline fadeInUp"><del>A</del> <ins>The</ins> Web Nerd</p>
+-->
+                    <div class="header-intro animation-step-4" data-animation="fadeIn">
                         <h2 class="assist">Introduction</h2>
 
-                        <p>A <abbr title="31 years old">31y old</abbr> web nerd hailing from Lisbon with an overflowing desire to build digital products that make the lives of a lot of people a bit better.</p>
+                        <h3>The web nerd</h3>
+                        <p>This is the tale of a <strong>nerd</strong> growing up on the <strong>web</strong>. He has an overflowing desire to build digital products that make the lives of a lot of people a bit better.</p>
 
                         <h3>In a nutshell</h3>
                         <ul class="tags">
@@ -78,10 +99,17 @@
                             <li>rwd</li>
                             <li>futurefriendly</li>
                         </ul>
+
+                        <p><button class="button button__discrete restart-animations">restart animations</button></p>
                     </div>
                 </div>
+            </div>
+        </header>
 
-                <div>
+        <main>
+            <section class="intro">
+
+                <div class="intro-quote">
                     <div class="pillow">
                         <blockquote class="quote t-big">
                             <p>An engineer by training yet a designer by heart.</p>
@@ -90,14 +118,33 @@
                     </div>
                 </div>
 
+
+                <div class="reading-modes for-js">
+                    <div class="pillow">
+                        <p><span class="t-light">Let's make this enjoyable.</span> You&hellip;</p>
+                        <ul>
+                            <li><button class="button mode-quick">&hellip;are in a rush <span>reading time: 2min</span></button></li>
+                            <li><button class="button mode-semifull">&hellip;have a bit of time <span>reading time: ~5min</span></button></li>
+                            <li><button class="button mode-full">&hellip;want to read everything <span>reading time: ~10min</span></button></li>
+                        </ul>
+                    </div>
+                </div>
                 <div>
                     <div class="pillow">            
 
                         <h2>The beginning</h2>
 
-                        <p>He has been in love with the web ever since he laid eyes on the wonders of the <em>bleeding edge</em> in browsing technology, back in 1998: <strong>IE 2.0</strong>. <abbr lang="webish" title="Who would have thought">Whodathunkit</abbr> he would be making a living out of what happened inside that chrome 15 years later? <em class="t-stone t-light">Certainly not that 16 years old teen, that's for sure.</em></p>
+                        <p>
+                            He has been in love with the web ever since he laid eyes on the wonders of the <em>bleeding edge</em> in browsing technology, back in 1998: <strong>IE 2.0</strong>.
+                            <span class="only-semifull only-full">
+                                <abbr lang="webish" title="Who would have thought">Whodathunkit</abbr> he would be making a living out of what happened inside that chrome 15 years later? <em class="t-stone t-light">Certainly not that 16 years old teen, that's for sure.</em>
+                            </span>
+                        </p>
 
-                        <p>Around 2003, he stumbled upon Dan's <a href="http://simplebits.com">simplebits.com</a>. By starting to explore his blogroll, he was thrown into the world of webstandards and hasn't let go ever since (see <a href="#mentors">remote mentors</a> section). He then ended up designing and coding his homegrown blogging platform (full-stack) which powers <a href="http://andr3.net/blog/">andr3.net/blog</a> for almost a decade. Also launched the now extinct mobifeeds.net &mdash; an RSS reader for <abbr title="eXtensible Hypertext Markup Language">XHTML</abbr> mobile browsers in 2006. Later co-launched <a href="http://igive.sapo.pt" hreflang="pt">iGive</a> and DailyPhotoWall.net (extinct).</p>
+                        <p class="only-full">Around 2003, he stumbled upon Dan's <a href="http://simplebits.com">simplebits.com</a>. By starting to explore his blogroll, he was thrown into the world of webstandards and hasn't let go ever since (see <a href="#mentors">remote mentors</a> section).
+                        <span class="only-semifull">
+                            He <span class="only-full">then</span> ended up designing and coding his homegrown blogging platform (full-stack) which powers <a href="http://andr3.net/blog/">andr3.net/blog</a> for almost a decade. Also launched the now extinct mobifeeds.net &mdash; an RSS reader for <abbr title="eXtensible Hypertext Markup Language">XHTML</abbr> mobile browsers in 2006. Later co-launched <a href="http://igive.sapo.pt" hreflang="pt">iGive</a> and DailyPhotoWall.net (Jan. 2011 - Dec. 2011).
+                        </span></p>
 
                         <p>But let's fast-forward to today, shall we?</p>
                     </div>
@@ -110,7 +157,7 @@
 
                         <p><strong>André is now a mature front-end engineer with an acute concern for elegant and purposeful design.</strong> Coming up with delightful solutions through a user-centred approach drives him to pursue simplicity, with enough complexity within users' effortless grasp.</p>
 
-                        <p>He's also grown quite fond of climbing onto a stage and speaking to his fellow colleagues and sharing best-practices and experiences.</p>
+                        <p class="only-semifull only-full">He's also grown quite fond of climbing onto a stage and speaking to his fellow colleagues and sharing best-practices and experiences.</p>
 
                     </div>
                 </div>
@@ -121,9 +168,9 @@
                 <div class="bridge">
                     <div class="pillow t-center">
 
-                        <h2>How did he get here?</h2>
+                        <h2>How did he get&nbsp;here?</h2>
 
-                        <p>Explore his path. <strong>Discover the web nerd.</strong></p>
+                        <p class="only-semifull only-full">Explore his path. <strong class="bff">Discover the web nerd.</strong></p>
           
                         <h2 class="t-assist">Journey Guide</h2>
                         <nav>
@@ -161,10 +208,13 @@
                             <figcaption>A screenshot of Uniplaces.com</figcaption>
                         </figure>
 
-                        <p>
+
+                        <p class="only-quick">André joined UniPlaces to lead the front-end development and assist in proving the validity of the pivot in the business model through a user-centered effort.</p>
+
+                        <p class="only-semifull only-full">
                             Leaping at the opportunity of being part of a young and promising team building a useful product from sunny Lisbon, André joined the early ranks of <a href="http://www.uniplaces.com">UniPlaces</a> in April 2013 to lead the front-end development and assist in proving the validity of the pivot in the business model through a user-centered effort.</p>
 
-                        <p>The effort came into frution when, 7 months later, the company successfuly raised $1,000,000 from Octopus Investments, with a track record of impressive growth supported by the launch of the MVP in June and maturity over the next months.</p>
+                        <p><span class="only-full">The effort came into frution when, </span>7 months later, the company successfuly raised $1,000,000 from Octopus Investments, with a track record of impressive growth supported by the launch of the <abbr title="Minimum Viable Product">MVP</abbr> launched in June<span class="only-full"> and its improvements over the next months.</span></p>
 
                         <h3>About the company</h3>
 
@@ -172,10 +222,14 @@
 
                         <h3>Highlighted work</h3>
 
-                        <ol>
+                        <ol class="highlighted-work">
                             <li>
                                 <strong class="t-stone">Student Website</strong>
                                 <a href="http://www.uniplaces.com/">uniplaces.com</a>
+                            </li>
+                            <li>
+                                <strong class="t-stone">Recommended Areas</strong>
+                                <a href="http://www.uniplaces.com/london/recommended">uniplaces.com/london/recommended</a>
                             </li>
                             <li>
                                 <strong class="t-stone">UniPlaces Pattern Library</strong>
@@ -188,6 +242,7 @@
                             <li>frontend</li>
                             <li>user-centered design</li>
                             <li>ux</li>
+                            <li>lean-ux</li>
                         </ul>
                     </div>
                 </section>
@@ -217,9 +272,10 @@
 
                         <p>André had been working at <a href="http://www.sapo.pt"><abbr title="Serviço de Apontadores POrtugueses">SAPO</abbr></a>&mdash;a local company to the likes of Yahoo!&mdash;for 4 years when he was challenged to be part of the team as Lead Front-end Engineer that would go ahead to redesign the #1 most visited website produced in Portugal: <a href="http://www.sapo.pt">www.sapo.pt</a>.</p>
 
-                        <p>With <abbr title="30 million">30M</abbr> monthly visits, its audience made it incredibly challenging to deliver not only a Responsive solution, but a future-friendly one: resolution-independent, device and browser agnostic but also usable and enjoyable. It strived to be a modern example of bleeding edge good practices but also universally accessible as much as possible.</p>
+                        <p>With roughly <abbr title="30 million">30M</abbr> monthly visits, its audience made it incredibly challenging to deliver not only a Responsive solution, but a future-friendly one: resolution-independent, device and browser agnostic but also usable and enjoyable. It strived to be a modern example of bleeding edge good practices but also universally accessible as much as possible.</p>
 
                         <figure class="t-wide">
+                            <button class="button play-video">Play / Pause video</button>
                             <video src="https://dl.dropboxusercontent.com/u/636550/UI/HP/Demo%20Takeover.mov" poster="/assets/imgs/sapo.png" controls>
                                 <img src="/assets/imgs/sapo.png" alt="A screencast of a High-Impact Multimedia Ad Format deployed at SAPO.pt">
                             </video>
@@ -236,7 +292,7 @@
 
                         <h3>Highlighted work</h3>
 
-                        <ol>
+                        <ol class="highlighted-work">
                             <li>
                                 <strong class="t-stone">Responsive Web Portal</strong>
                                 <a href="http://www.sapo.pt/">sapo.pt</a> (Ed. 2012 - now)
@@ -395,6 +451,6 @@
 
         <script src="/vendor/jquery2/jquery.js"></script>
         <script src="/vendor/stickem/jquery.stickem.js"></script>
-        <script src="/assets/js/meetandr3.js">
+        <script src="/assets/js/meetandr3.js"></script>
     </body>
 </html>
