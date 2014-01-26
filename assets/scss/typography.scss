@@ -3,8 +3,9 @@
 
 /* Sans serif */
 body,
-h1 .nickname {
-    font-family: "ff-dagny-web-pro", "freightsans pro", calibri, sans-serif;
+h1 .nickname,
+main blockquote.quote {
+    font-family: "ff-tisa-web-pro", "ff-dagny-web-pro", "freightsans pro", calibri, sans-serif;
     font-weight: 400;
     font-style: normal;
 }
@@ -20,7 +21,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: "utopia-std-headline", georgia, serif;
+    font-family: "jubilat", "utopia-std-headline", georgia, serif;
     font-weight: 400;
     font-style: normal;
 
@@ -38,14 +39,12 @@ main h4,
 main h5,
 main h6,
 main .section p:first-of-type:first-letter {
-    font-family: "utopia-std-display", georgia, serif;
+    font-family: "jubilat", "utopia-std-display", georgia, serif;
     font-weight: 700;
     font-style: normal;
 }
 
 main blockquote.quote {
-    font-family: "utopia-std-display", georgia, serif;
-    font-weight: 700;
     font-style: italic;
 }
 

@@ -62,7 +62,8 @@ main {
 }
 
 .section {
-    padding-top: 4em;
+    padding-top: 2em;
+    padding-bottom: 2em;
     max-width: 49em;
     margin-left: auto;
     margin-right: auto;
@@ -189,4 +190,10 @@ main {
             width: auto;
         }
     }
+}
+
+
+.bff {
+	display: inline-block;
+	white-space: nowrap;
 }

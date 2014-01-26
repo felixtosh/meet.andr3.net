@@ -8,14 +8,14 @@
         list-style: none;
         display: inline-block;
         vertical-align: top;
-        color: #888;
         text-transform: lowercase;
         font-size: 0.85em;
         margin-right: 0.5em;
-        border: 1px solid #888;
-        color: $color3;
-        padding: 0.2em 0.5em;
-        letter-spacing: 1px;
+        border: 1px solid #777;
+        color: #777;
+        padding: 0.3em 0.5em 0.5em;
+        letter-spacing: 0px;
+        line-height: 1;
 
         &:before {
             content: "#";
@@ -24,16 +24,22 @@
 }
 
 header {
-    text-align: center;
+    text-align: left;
     line-height: 2;
-    padding: 5% 0;
+    padding: 0;
     background: $color1_aux;
     color: $color1;
 
+    [data-icon] {
+        font-size: 2em;
+        position: absolute;
+    }
     h1 {
         font-size: 4rem;
-        text-align: center;
+        text-align: left;
         line-height: 1;
+        margin: 0;
+        margin-bottom: 0.5em;
 
         .fn {
             font-weight: 400;
@@ -47,16 +53,20 @@ header {
                 font-weight: bold;
             }
         }
+        .who {
+            position: relative;
+        }
         .nickname {
             font-weight: 400;
             display: block;
             font-size: 0.4em;
             text-align: center;
             text-transform: lowercase;
-            text-indent: 16em;
-            @media (max-width: 650px) {
-                text-indent: 0;
-            }
+            position: absolute;
+            left: 0;
+            height: 1.5em;
+            line-height: 1.5;
+            bottom: -0.5em;
         }
         abbr[title] {
             border: none;
@@ -76,7 +86,6 @@ header {
         ins {
             opacity: 0;
             font-style: italic;
-            display: block;
         }
         body:hover & {
             del {
@@ -88,12 +97,15 @@ header {
         }
         del,
         ins {
-            margin-left: -0.7em;
             text-decoration: none;
             font-size: 0.85em;
             letter-spacing: -1px;
             transition: opacity 2s;
         }
+    }
+    .box {
+        padding-top: 20%;
+        padding-top: 20vh;
     }
 }
 
@@ -105,8 +117,19 @@ blockquote.quote {
     max-width: 28.5em;
     line-height: 1;
 
+    p {
+        margin-bottom: 0;
+    }
+    .quote--sig {
+        color: rgba(240,240,240,0.8);
+        font-size: 0.5em;
+        small {
+            font-size: 1em;    
+        }
+    }
+
     &.t-big {
-        font-size: 1.7em;
+        font-size: 2.3em;
         padding: 0;
         line-height: 1.2;
         margin: 0 auto;
@@ -122,10 +145,6 @@ blockquote.quote {
                 margin-left: 0.1em;
             }
         }
-
-        &:last-child {
-            margin-top: -1em;
-        }
     }
 }
 
@@ -137,14 +156,20 @@ main p {
     padding: 5% 0;
 
     &:nth-child(2n+2) {
-        background: $color3_aux;
-        color: #222;
+        background: $color3_light;
+        color: $color3_dark;
+
+        h2,
+        h3,
+        h4 {
+            color: $color3_dark;
+        }
     }
 }
 .bridge {
     .pillow {
         padding: 5% 0;
-        border-bottom: 2px solid $color3;
+        border-bottom: 2px solid $color1;
     }
 }
 .inline-anchors {
@@ -197,4 +222,175 @@ main p {
         }
     }
 }
+
+.ratio {
+    &[data-ratio=one-screen] {
+        box-sizing: border-box;
+    }
+}
+
+.header-intro {
+    font-size: 0.8em;
+    max-width: 50em;
+    margin-top: 5em;
+    color: $color3_dark;
+    padding-bottom: 1em;
+
+    h3,
+    .tags li {
+        color: inherit;
+    }
+    .tags li {
+        border-width: 1px;
+        border-color: inherit;
+    }
+}
+
+header {
+    [data-animation] {
+        opacity: 0;
+
+        .header-animation-off &,
+        .no-js & {
+            opacity: 1;
+        }
+    }
+    .restart-animations[class] {
+        display: none;
+    }
+    .header-animation-off & .restart-animations {
+        display: block;
+    }
+}
+header .box * {
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+}
+
+header {
+    .pillow {
+        position: relative;
+    }
+    .button {
+        display: block;
+        font-size: 0.8em;
+        position: absolute;
+        top: 1em; 
+        right: 0;
+        color: $color3_dark;
+    }
+}
+.button {
+    border: 1px solid;
+    padding: 0.2em 1em 0.35em;
+    border-radius: 5px;
+    background: rgba(255,255,255,0);
+    color: $color2;
+    border-color: $color2;
+    transition: background-color 1s;
+    
+
+    &.button__discrete {
+        text-decoration: underline;    
+        border-color: rgba(0,0,0,0.1);
+        transition: border-color 1s, color 1s;
+    }
+    &:focus,
+    &:hover {
+        text-decoration: none;
+        color: $color1;
+        border-color: $color1;
+        outline: 0;
+        background-color: rgba(255,255,255,0.3);
+    }
+    &:active {
+        background: white;
+        text-decoration: none;
+    }
+}
+
+.intro-quote {
+    padding: 10% 0;
+    padding: 10vh 0 30vh;
+    background: url(http://farm5.staticflickr.com/4113/5085663661_baa8ef28ba_o.jpg) center center;
+    background-size: cover;
+
+    color: white;
+    text-shadow: 1px 1px 0px black;
+}
+.reading-modes {
+    padding: 1em 0;
+
+    p {
+        text-align: center;
+        max-width: none;
+    }
+
+    ul {
+        font-size: 0;
+    }
+    li {
+        display: inline-block;
+        vertical-align: top;
+        list-style: none;
+        width: 33%;
+        box-sizing: border-box;
+        font-size: 16px;
+        font-size: 1rem;
+        padding-right: 0.5em;
+
+        + li {
+            text-align: center;
+            padding-right: 0em;
+            + li {
+                text-align: right;
+                padding-left: 0.5em;
+            }
+        }
+        button {
+            display: inline-block;
+            width: 100%;
+        }
+    }
+
+    button {
+        position: relative;
+
+        span {
+            height: 1.5em;
+            position: absolute;
+            top: 100%;
+            left:0;
+            width: 100%;
+            text-align: center;
+            font-size: 0.8em;
+            color: rgba(0,0,0,0.4);
+        }
+    }
+}
+
+.intro-quote {
+    border-top: 5px solid $color1;
+    border-bottom: 5px solid $color1;
+}
+
+[data-reading-mode=quick] .reading-modes .mode-quick,
+[data-reading-mode=semifull] .reading-modes .mode-semifull,
+[data-reading-mode=full] .reading-modes .mode-full {
+    color: $color1;
+    border-color: $color1;
+
+    &:after {
+        content: '\2713';
+        margin-left: 0.5em;
+    }
+}
+
+[data-reading-mode=quick] {
+    .only-semifull,
+    .only-full {
+        display: none;
+    }
+}
+
 

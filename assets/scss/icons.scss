@@ -19,13 +19,9 @@
     line-height: 1;
 
     &[data-icon=dr3-logo] {
-        font-size: 5em;
-        background: white;
+        background: white url(/assets/imgs/andr3-circle.png);
+        background-size: 100%;
         padding: .25em;
         border-radius: 5em;
-
-        &:before {
-            content: "\e000";
-        }
     }
 }

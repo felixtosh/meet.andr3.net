@@ -37,7 +37,7 @@ hr {
 body {
     line-height: 1.5;
     font-size: 1.2rem;
-    color: #222;
+    color: #444;
     overflow-x: hidden;
 
     @media (min-width: 480px) {
@@ -88,7 +88,7 @@ a {
 
     &:focus,
     &:hover {
-        color: $color3;
+        color: $color2;
     }
 }
 
@@ -96,7 +96,7 @@ h2,
 h3,
 h4 {
     margin-bottom: 0.5em;
-    color: $color3;
+    color: $color4;
     line-height: .9;
 }
 
@@ -114,4 +114,8 @@ img,
 video,
 object {
     max-width: 100%;
+}
+
+abbr[title] {
+	cursor: help;
 }

@@ -1,0 +1,33 @@
+body:before {
+    content: 'S';
+    padding: 0.2em 1em;
+    font-size: 0.7em;
+    font-weight: bold;
+    background: rgba(255,255,255,0.8);
+    color: black;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+
+header [data-icon] {
+    position: static;
+}
+
+.list-of-mentors  {
+	li {
+		width: 100%;
+		text-align: left;
+		padding: 0;
+	}
+}
+
+.reading-modes[class] {
+    li {
+        display: block;
+        max-width: 300px;
+        width: 100%;
+        margin: 0 auto 2em;
+        padding: 0;
+    }
+}
