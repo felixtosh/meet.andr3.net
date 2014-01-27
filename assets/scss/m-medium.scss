@@ -11,8 +11,8 @@ body:before {
 }
 
 
-header [data-icon] {
-    position: static;
+header #sticky-header {
+	padding-left: 2em;
 }
 
 
@@ -30,4 +30,23 @@ header [data-icon] {
         margin: 0 auto 2em;
         padding: 0;
     }
+}
+
+
+.actions {
+	.button {
+		font-size: 0.9em;
+	}
+	li,
+	li:first-child {
+		span.button--main {
+			padding-right: 1em;
+		}
+	}
+	li,
+	li:last-child {
+		span.button--main {
+			padding-left: 1em;
+		}
+	}
 }
