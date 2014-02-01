@@ -17,6 +17,14 @@ module.exports = function (grunt) {
             css: {
                 src: [
                     "build/css/base.css",
+                    "build/css/common.css",
+                    "build/css/content.css",
+                    "build/css/forms.css",
+                    "build/css/icons.css",
+                    "build/css/l-large.css",
+                    "build/css/m-medium.css",
+                    "build/css/s-small.css",
+                    "build/css/typography.css",
                 ],
                 dest: "build/css/all.css"
             }
@@ -59,7 +67,7 @@ module.exports = function (grunt) {
             },
             css: {
                 files: ["assets/scss/*.scss"],
-                tasks: ["sass","concat", "autoprefixer"],
+                tasks: ["sass","autoprefixer","concat"],
                 options: {
                     spawn: false
                 }
@@ -87,14 +95,60 @@ module.exports = function (grunt) {
         // Autoprefixer
         autoprefixer: {
             options: {
-                browsers: ['last 3 version']
+                browsers: ['ff 3', 'android 3','last 3 version'],
+                diff: 'build/autoprefixer.diff'
             },
             dist: {
-                files: {
-                    'build/css/all.prefixed.css': 'build/css/all.css'
-                }
+                src: 'build/css/*.css'
             }
-        }
+        },
+
+        // Responsive videos
+        responsive_videos: {
+            dist:{
+                options: {
+                    sizes: [{
+                        name: "small",
+                        width: 320,
+                        poster: true
+                    },{
+                        name: "large",
+                        width: 1024,
+                        poster: true
+                    }],
+                    encodes: [{
+                        webm: [
+                            {'-vcodec': 'libvpx'},
+                            {'-acodec': 'libvorbis'},
+                            {'-crf': '12'},
+                            {'-q:a': '100'},
+                            {'-threads': '0'}
+                        ],
+                        mp4: [
+                            {'-vcodec':'libx264'},
+                            {'-acodec': 'libfaac'},
+                            {'-pix_fmt': 'yuv420p'},
+                            {'-q:v': '4'},
+                            {'-q:a': '100'},
+                            {'-threads': '0'}
+                        ],
+                        ogv: [{
+                            '-vcodec': 'libtheora'
+                        }, {
+                            '-acodec': 'libvorbis'
+                        }, {
+                            '-threads': '0'
+                        }]
+                    }]
+                },
+                files: [{
+                    expand: true,
+                    src: ['videos/**.{mov,mp4}'],
+                    cwd: 'assets/',
+                    dest: 'build/'
+                }]
+            }
+        },
     });
 
 
@@ -105,6 +159,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-autoprefixer');
+    grunt.loadNpmTasks('grunt-responsive-videos');
 
     // Specify available cmds/tasks
     grunt.registerTask('dev', ['sass', 'concat', 'autoprefixer' ]);
