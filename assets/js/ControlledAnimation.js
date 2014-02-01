@@ -28,6 +28,8 @@ $.extend(ControlledAnimation.prototype, {
     step: function () {
         this.current++;
 
+        this.start = this.start || new Date().getTime();
+
         var target = this.element.find('.animation-step-' + this.current);
         if (target.length) {
             this.markAs('step-'+this.current);

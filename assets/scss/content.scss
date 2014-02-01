@@ -77,6 +77,10 @@ main {
         }
     }
 
+    blockquote.quote p {
+        max-width: none;
+    }
+
     /* Centered title */
     &.section__centered {
         h2 {
@@ -107,7 +111,7 @@ main {
     }
     > .pillow {
         > p:first-of-type:first-letter {
-            font-size: 3.24em;
+            font-size: 3.35em;
             float: left;
             margin-top: -0.29em;
             margin-right: 0.1em;
@@ -134,6 +138,13 @@ main {
         counter-increment: figcount;
         text-align: center;
 
+        .figure--title {
+            text-transform: uppercase;
+            text-align: center;
+            font-size: 0.8em;
+            padding: 1em 0 0.5em;
+            opacity: 0.5;
+        }
         &.t-wide {
             img,
             video {
@@ -152,7 +163,7 @@ main {
             color: #777;
             font-size: 0.7em;
             line-height: 1.2;
-            padding: 0.25em 0;
+            padding: 0.25em 0 0.5em;
 
             &:before {
                 content: "#" counter(figcount) ":";
@@ -169,26 +180,124 @@ main {
     font-size: 0;
 
     > li {
-        font-size: 1.4rem;
+        font-size: 1.1rem;
         display: inline-block;
         vertical-align: top;
         width: 33.333%;
         box-sizing: border-box;
         text-align: center;
         padding-right: 1.5%;
-        padding-left: 1.5%;
+        color: darkgoldenrod;
+
         line-height: 1;
         margin-bottom: 2em;
+        font-weight: 800;
+        text-align: left;
+        text-transform: uppercase;
+        line-height: 1;
 
-        &:nth-child(2n+1) {
-            padding-right: 0;
+        span {
+            font-weight: 400;
+            text-transform: none;
+            font-size: 1.3em;
+            line-height: 1.2;
+            margin-right: 0.2em;
+            display: block;
         }
-        &:last-child {
+        &.more {
             display: block;
             margin-top: 2em;
             color: #999;
             width: auto;
         }
+    }
+}
+
+.list-of {
+    font-size: 0;
+
+    li {
+        display: inline-block;
+        font-size: 16px;
+        font-size: 1rem;
+    }
+}
+
+.list-of-links {
+    a {
+        padding: 1em 0;
+        background: $color1;
+        color: white;
+        text-indent: 0;
+        overflow: visible;
+        width: 100%;
+        height: auto;
+        font-family: inherit;
+        display: block;
+
+        text-align: center;
+        position: relative;
+        padding-top: 4em;
+        transition: background 0.3s,
+                    color 0.3s;
+        border: 3px solid $color1;
+
+
+        &:hover {
+            background: #eee;
+            color: $color1;
+        }
+        &:active {
+            position: relative;
+            top: 2px;
+            left: 2px;
+        }
+        &:after {
+            content: attr(data-human-href);
+            font-size: 0.7em;
+            color: rgba(0,0,0,0.5);
+            display: block;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            text-align: center;
+            padding: 0 0.5em;
+        }
+        .html-icon {
+            display: block;
+            width: 100%;
+            text-align: center;
+            font-size: 3em;
+            position: absolute;
+            left: 0;
+            top: 0.2em;
+        }
+    }
+    li {
+        width: 25%;
+        box-sizing: border-box;
+        margin-bottom: 0;
+
+        &:first-child {
+            a {
+                border-radius: 0.3em 0 0 0em;
+            }
+        }
+        &:nth-child(4) {
+            a {
+                border-radius: 0 0.3em 0 0;
+            }
+        }
+        &:nth-last-child(4) {
+            a {
+                border-radius: 0 0 0 0.3em;
+            }
+        }
+        &:last-child {
+            a {
+                border-radius: 0 0 0.3em 0;
+            }
+        }
+
     }
 }
 

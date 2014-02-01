@@ -4,7 +4,8 @@
 /* Sans serif */
 body,
 h1 .nickname,
-main blockquote.quote {
+main blockquote.quote,
+.form .field--label[data-required]:after {
     font-family: "ff-tisa-web-pro", "ff-dagny-web-pro", "freightsans pro", calibri, sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -20,7 +21,9 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+blockquote.quote *,
+.form .field--label {
     font-family: "jubilat", "utopia-std-headline", georgia, serif;
     font-weight: 400;
     font-style: normal;

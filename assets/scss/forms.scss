@@ -1,0 +1,87 @@
+/* Icons to be used wherever whenever */
+@import "config";
+
+.form {
+    background: #FAD5BE;
+    padding: 0.5em;
+    color: $color3_dark;
+
+    fieldset {
+        border: 0;
+        padding: 0;
+    }
+    input[type=text],
+    input[type=email],
+    input[type=url],
+    input[type=number],
+    textarea {
+        border: 0;
+        background: rgba(255,255,255,0.3);
+        padding: 0.2em 0.4em;
+        display: inline-block;
+        box-sizing: border-box;
+        width: 50%;
+        min-width: 250px; 
+        color: inherit;
+        appearance: textfield;
+        font-size: 0.8em;
+
+        &:focus {
+            outline: 0;
+            background: white;
+            color: $color4;
+        }
+    }
+    textarea {
+        min-height: 8em;
+        min-width: 100%;
+    }
+
+    .field--label {
+        display: block;
+
+        &[data-required]:after {
+            display: inline-block;
+            background: rgba(0,0,0,0.2);
+            color: white;
+            padding: 0.2em 0.5em;
+            text-transform: uppercase;
+            content: 'required';
+            font-size: 0.5em;
+            position: relative;
+            letter-spacing: 1px;
+            top: -0.5em;
+            left: 1em;
+        }
+    }
+    .field--help {
+        font-size: 0.7em;
+        opacity: 0.6;
+        display: block;
+    }
+
+    .buttons {
+        button[type=submit] {
+            display: inline-block;
+            min-width: 25%;
+            font-weight: bold;
+            border-width: 3px;
+        }
+    }
+}
+
+::-webkit-input-placeholder {
+   color: rgba(0,0,0,0.5);
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: rgba(0,0,0,0.5);
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: rgba(0,0,0,0.5);
+}
+
+:-ms-input-placeholder {  
+   color: rgba(0,0,0,0.5);
+}

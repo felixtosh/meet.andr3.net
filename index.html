@@ -2,7 +2,7 @@
 <html class="no-js">
     <head>
         <meta charset="utf-8">
-        <title>Meet andr3</title>
+        <title>Meet André Luís a.k.a. andr3 &mdash; Frontend Eng. &middot; Designer &middot; Speaker</title>
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 
@@ -48,7 +48,7 @@
         <meta name="twitter:domain" content="meet.andr3.net">
 
     </head>
-    <body class="vcard" data-reading-mode="quick">
+    <body class="vcard" data-reading-mode="full">
 <!--
         <div class="debug">
             <ul class="colors">
@@ -72,17 +72,17 @@
         <header>
             <div class="pillow ratio" data-ratio="one-screen">
                 <div class="box">
-                    <div data-icon="dr3-logo"></div>
-                    <h1>
-                        <span class="animation-step-1" data-animation="fadeInDown">Meet</span>
-                        <span class="who">
-                            <span class="fn animation-step-2" data-animation="fadeIn">André <span>Luís</span></span>
-                            <span class="nickname animation-step-3" data-animation="fadeInDown"><abbr title="also known as">aka</abbr> andr3</span>
-                        </span>
-                    </h1>
-<!--
-                    <p class="tagline fadeInUp"><del>A</del> <ins>The</ins> Web Nerd</p>
--->
+                    <div id="sticky-header" class="make-this-sticky">
+                        <div data-icon="dr3-logo"></div>
+                        <h1>
+                            <span class="animation-step-1" data-animation="fadeInDown">Meet</span>
+                            <span class="who">
+                                <span class="fn animation-step-2" data-animation="fadeIn">André <span>Luís</span></span>
+                                <span class="nickname animation-step-3" data-animation="fadeInDown"><abbr title="also known as">aka</abbr> andr3</span>
+                            </span>
+                        </h1>
+                    </div>
+
                     <div class="header-intro animation-step-4" data-animation="fadeIn">
                         <h2 class="assist">Introduction</h2>
 
@@ -102,7 +102,30 @@
 
                         <p><button class="button button__discrete restart-animations">restart animations</button></p>
                     </div>
-                </div>
+                </div> <!-- /.box -->
+
+                <ul id="site-actions" class="actions make-this-sticky">
+                    <li>
+                        <a class="button" href="mailto:me@andr3.net">
+                            <span class="button--main">Get in touch</span>
+                            <span class="button--secondary">available for hire</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="button" href="mailto:me@andr3.net">
+                            <span class="button--main">Follow him</span>
+                            <span class="button--secondary">all over the web</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="button" href="mailto:me@andr3.net">
+                            <span class="button--main t-no-italic">♥</span>
+                            <span class="button--secondary">this web thingie</span>
+                        </a>
+                    </li>
+                </ul>
             </div>
         </header>
 
@@ -451,6 +474,9 @@
 
         <script src="/vendor/jquery2/jquery.js"></script>
         <script src="/vendor/stickem/jquery.stickem.js"></script>
+        <script src="/vendor/sticky/jquery.sticky.js"></script>
+
+        <script src="/assets/js/ControlledAnimation.js"></script>
         <script src="/assets/js/meetandr3.js"></script>
     </body>
 </html>

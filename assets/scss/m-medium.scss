@@ -12,8 +12,32 @@ body:before {
 
 
 header #sticky-header {
-	padding-left: 2em;
+	padding-left: 4em;
 }
+header [data-icon] {
+    left: 0;
+}
+
+
+
+/** 
+ *  DISABLING STICKY BEHAVIOUR 
+ *
+ *  We could disabled the sticky behaviour depending on screen size,
+ *  but devices rotate, sizes changes mid-flight. Hence... 
+ **/
+#meetandr3 .make-this-sticky {
+    position: static !important; /* !important needed to override @style.  */
+
+    &.actions {
+        position: absolute !important; /* !important needed to override @style. */
+    }
+}
+body:after {
+    display: none;
+}
+
+/** END OF DISABLING STICKY **/
 
 
 .list-of-mentors  {
@@ -22,8 +46,8 @@ header #sticky-header {
     }
 }
 
-.reading-modes[class] {
-    li {
+.intro .reading-modes[class] {
+    #meetandr3 & li {
         display: block;
         max-width: 300px;
         width: 100%;
@@ -31,6 +55,7 @@ header #sticky-header {
         padding: 0;
     }
 }
+
 
 
 .actions {
@@ -49,4 +74,35 @@ header #sticky-header {
 			padding-left: 1em;
 		}
 	}
+}
+
+.list-of-links {
+    li {
+        width: 50%;
+
+        &,
+        &:nth-child(n) a {
+            border-radius: 0;
+        }
+        &:first-child {
+            a {
+                border-radius: 0.3em 0 0 0em;
+            }
+        }
+        &:nth-child(2) {
+            a {
+                border-radius: 0 0.3em 0 0;
+            }
+        }
+        &:nth-last-child(2) {
+            a {
+                border-radius: 0 0 0 0.3em;
+            }
+        }
+        &:last-child {
+            a {
+                border-radius: 0 0 0.3em 0;
+            }
+        }
+    }
 }

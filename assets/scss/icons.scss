@@ -6,22 +6,77 @@
  */
 @font-face {
     font-family: 'andr3-icos';
-    src: url(/assets/fonts/icomoon.woff) format('woff');
+    src: url(/assets/fonts/andr3.woff) format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
-[data-icon] {
+[data-icon]
+[data-icon]:before,
+.html-icon {
     font-family: 'andr3-icos';
+    font-style: normal;
+}
+
+[data-icon] {
     display: inline-block;
     width: 1em;
     height: 1em;
     line-height: 1;
+    text-indent: -9999em;
+    overflow: hidden;
+    direction: ltr;
 
     &[data-icon=dr3-logo] {
         background: white url(/assets/imgs/andr3-circle.png);
+        background: white url(/assets/imgs/andr3-2014.png);
         background-size: 100%;
         padding: .25em;
         border-radius: 5em;
     }
+
+    &:before {
+        width: 1em;
+        height: 1em;
+        display: block;
+        text-indent: 0;
+        color: inherit;
+    }
+    &[data-icon=share]:before {
+        content: '\e600'
+    }
+    &[data-icon=reddit]:before {
+        content: '\e601'
+    }
+    &[data-icon=instagram]:before {
+        content: '\e602'
+    }
+    &[data-icon=linkedin]:before {
+        content: '\e603'
+    }
+    &[data-icon=github]:before {
+        content: '\e604'
+    }
+    &[data-icon=google]:before {
+        content: '\e605'
+    }
+    &[data-icon=twitter]:before {
+        content: '\e606'
+    }
+    &[data-icon=facebook]:before {
+        content: '\e607'
+    }
+    &[data-icon=dribbble]:before {
+        content: '\e608'
+    }
+    &[data-icon=flickr]:before {
+        content: '\e609'
+    }
+    &[data-icon=lanyrd]:before {
+        content: '\e60a'
+    }
+
+    
+    
+
 }
