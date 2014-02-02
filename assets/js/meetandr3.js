@@ -18,7 +18,6 @@ $.extend(ReadingModes.prototype, {
     handleKey: function (event) {
         var mode,
             key = event.keyCode;
-        console.log(key);
         switch (key) {
             case 49: // [1]
                 mode = 'quick';
