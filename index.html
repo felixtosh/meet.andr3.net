@@ -116,15 +116,15 @@
                         <h3>In a nutshell</h3>
                         <ul class="tags">
                             <li>frontend</li>
-                            <li>webdesign</li>
                             <li>user-centered design</li>
                             <li>accessibility</li>
+                            <li>webdesign</li>
                             <li>semantics</li>
                             <li>rwd</li>
                             <li>futurefriendly</li>
                         </ul>
 
-                        <p><button class="button button__discrete restart-animations">restart animations</button></p>
+                        <p><button class="button t-discrete t-dark restart-animations">restart animations</button></p>
                     </div>
                 </div> <!-- /.box -->
 
@@ -145,7 +145,7 @@
 
                     <li>
                         <a class="button" href="mailto:me@andr3.net">
-                            <span class="button--main t-no-italic">&#9733;</span>
+                            <span class="button--main t-no-italic"><i class="html-icon">&#xe60c;</i></span>
                             <span class="button--secondary">this web thingie</span>
                         </a>
                     </li>
@@ -156,7 +156,7 @@
         <main>
             <section class="intro">
 
-                <div class="intro-quote t-off">
+                <div class="intro-quote t-off ratio" data-ratio="one-screen">
                     <div class="pillow">
                         <blockquote class="quote t-big">
                             <p>An engineer by training yet a designer by heart.</p>
@@ -175,7 +175,7 @@
                         <li><button title="At any time, press key 3" class="button mode-full" data-mode="full">want to read everything <em class="key">3</em> <i></i><span>reading time: ~10min</span></button></li>
                     </ul>
                 </div>
-                <div>
+                <div data-turn-off=".intro-quote">
                     <div class="pillow">            
 
                         <h2>The beginning</h2>
@@ -207,6 +207,48 @@
 
                         <p class="only-semifull only-full">He's also grown quite fond of climbing onto a stage and speaking to his fellow colleagues and sharing best-practices and experiences.</p>
 
+                    </div>
+                </div>
+
+                <div>
+                    <div class="pillow">
+                        <ul class="list-of list-of-memories">
+                            <li>
+                                <a href="http://www.slideshare.net/andr3/pdf-responsive-webdesign-umahistoriadastrincheiras">
+                                    <img src="/build/imgs/dist/slides-esad.png">
+                                    <span class="caption">
+                                        ESAD Web Talks: RWD from the trenches, in Portuguese
+                                    </span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="http://instagram.com/p/a_VZWFOgNt/">
+                                    <img src="/build/imgs/dist/highlight-instagram.jpg">
+                                    <span class="caption">
+                                        Highlight from Instagram
+                                    </span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="http://10web.pt/programas/programa-1-desenvolvimento-de-front-end-andre-luis/">
+                                    <img src="/build/imgs/dist/highlight-10web.jpg">
+                                    <span class="caption">
+                                        André being interviewed for a podcast
+                                    </span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="http://ux.sapo.pt/3950.html">
+                                    <img src="/build/imgs/dist/highlight-sapoux.jpg">
+                                    <span class="caption">
+                                        Accessibility User Testing at SAPO
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
 
@@ -448,7 +490,7 @@
             </div> <!-- /.eras -->
 
 
-            <div id="mentors" class="extra">
+            <div id="mentors" class="extra only-full only-semifull">
                 <section class="section">
                     <div class="pillow">
                         <h2>Remote Mentors</h2>
@@ -493,6 +535,8 @@
                             <li><span>Tiago</span> Pedras</li>
                             <li><span>Daniel</span> Burka</li>
                         </ul>
+
+                        <p>If your name is up there, you have been a major influence on André's work.</p>
                     </div>
                 </section>
             </div>
@@ -500,8 +544,8 @@
 
         <div class="footer-summary">
             <div id="contact" class="contact">
-                <form id="frm_contact" class="form" action="./" method="post">
-                    <div class="pillow">
+                <form id="frm_contact" class="form" action="./contact" method="post">
+                    <div class="pillow" id="frm_submission">
                         <h2>Get in touch</h2>
                         <p>Whether you just want to say <q>Hi</q> or you have a question or business proposition, hit him&nbsp;up.</p>
 
@@ -511,31 +555,31 @@
                             <p class="field">
                                 <label for="message">
                                     <span class="field--label" data-required>What's on your mind?</span>
-                                    <textarea required id="message" name="message" placeholder="(Go ahead, dump it all here&hellip;)"></textarea>
+                                    <textarea required id="message" name="message" placeholder="Say your piece here&hellip;"></textarea>
                                 </label>
                             </p>
 
                             <p class="field">
                                 <label for="subject">
-                                    <span class="field--label">What's it about?</span>
-                                    <input type="text" id="subject" name="subject" placeholder="(name your subject)">
+                                    <span class="field--label">Reason</span>
+                                    <input class="t-full" type="text" id="subject" name="subject" placeholder="Why are you reaching him?">
                                 </label>
                             </p>
                         </fieldset>
-                        <fieldset>
+                        <fieldset class="submitter">
                             <legend class="t-assist">Who might you be?</legend>
 
                             <p class="field">
                                 <label for="who">
                                     <span class="field--label">Your name</span>
-                                    <input type="text" id="who" name="who">
+                                    <input class="t-full" type="text" id="who" name="who">
                                 </label>
                             </p>
 
                             <p class="field">
-                                <label for="who">
+                                <label for="who_contact">
                                     <span class="field--label">Some sort of contact</span>
-                                    <input type="text" id="who" name="who" placeholder="">
+                                    <input class="t-full" type="text" id="who_contact" name="who_contact" placeholder="">
                                     <span class="field--help">An email address or something he can use to reply.</span>
                                 </label>
                             </p>
@@ -546,6 +590,19 @@
                             </button>
                         </p>
                     </div>
+                    <div id="frm_sent" data-for-status="saved" aria-hidden="true">
+                        <div class="pillow">
+                            <div>
+                                <h2>Thank you! He's got your message</h2>
+                                <p>He'll get back to you as soon as possible.</p>
+
+                                <div class="again">
+                                    <p class="t-light">Forgot something?</p>
+                                    <p><button type="button" class="button">Send another!</button></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </form>
             </div>
             <div id="follow">
@@ -554,14 +611,17 @@
                     <p>He can be found on pretty much every online service out there, but these are the popular online water coolers.</p>
 
                     <ul class="list-of list-of-links">
-                        <li id="twitter"><a rel="me" href="http://twitter.com/andr3" data-human-href="twitter.com/andr3"><i class="html-icon">&#xe606;</i>Twitter</a></li>
+                        <li id="twitter"><a rel="me" href="http://twitter.com/andr3" data-human-href="twitter.com/andr3"><i class="html-icon">&#xe606;</i>twitter</a>
+                            <a href="https://twitter.com/andr3" class="twitter-follow-button" data-show-count="false">Follow @andr3</a>
+                            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+                        </li>
                         <li id="github"><a rel="me" href="http://github.com/andr3pt" data-human-href="github.com/andr3pt"><i class="html-icon">&#xe604;</i>GitHub</a></li>
                         <li id="linkedin"><a rel="me" href="http://linkedin.com/in/andr3" data-human-href="linkedin.com/in/andr3"><i class="html-icon">&#xe603;</i>LinkedIn</a></li>
                         <li id="lanyrd"><a rel="me" href="http://lanyrd.com/profile/andr3/" data-human-href="lanyrd.com/profile/andr3"><i class="html-icon">&#xe60a;</i>Lanyrd</a></li>
                         <li id="dribbble"><a rel="me" href="http://dribbble.com/players/andr3" data-human-href="dribbble.com/players/andr3"><i class="html-icon">&#xe608;</i>dribbble</a></li>
-                        <li id="flickr"><a rel="me" href="http://flickr.com/photos/andr3/" data-human-href="flickr.com/photos/andr3"><i class="html-icon">&#xe609;</i>Flickr</a></li>
-                        <li id="instagram"><a rel="me" href="http://instagram.com/andr3/" data-human-href="instagram.com/andr3"><i class="html-icon">&#xe602;</i>Instagram</a></li>
-                        <li id="facebook"><a rel="me" href="http://facebook.com/andreluis" data-human-href="facebook.com/andreluis"><i class="html-icon">&#xe607;</i>Facebook</a></li>
+                        <li id="flickr"><a rel="me" href="http://flickr.com/photos/andr3/" data-human-href="flickr.com/photos/andr3"><i class="html-icon">&#xe609;</i>flickr</a></li>
+                        <li id="instagram"><a rel="me" href="http://instagram.com/andr3/" data-human-href="instagram.com/andr3"><i class="html-icon">&#xe602;</i>instagram</a></li>
+                        <li id="facebook"><a rel="me" href="http://facebook.com/andreluis" data-human-href="facebook.com/andreluis"><i class="html-icon">&#xe607;</i>facebook</a></li>
                     </ul>
                 </div>
             </div>
@@ -592,6 +652,8 @@
         <script src="/vendor/jquery-waypoints/waypoints.js"></script>
 
         <script src="/assets/js/ControlledAnimation.js"></script>
+        <script src="/assets/js/AsyncForm.js"></script>
+        <script src="/assets/js/smoothScrollTo.function.js"></script>
         <script src="/assets/js/meetandr3.js"></script>
 
         <script>

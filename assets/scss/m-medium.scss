@@ -106,3 +106,25 @@ body:after {
         }
     }
 }
+
+
+
+.list-of-memories  {
+    li {
+        width: 22%;
+    }
+}
+
+.submitter .field {
+
+    &,
+    & + .field {
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+#frm_sent .pillow {
+    width: 80%;
+}

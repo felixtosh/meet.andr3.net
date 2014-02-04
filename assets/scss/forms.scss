@@ -2,9 +2,9 @@
 @import "config";
 
 .form {
-    background: #FAD5BE;
+    background: $color1_light;
     padding: 0.5em;
-    color: $color3_dark;
+    color: $color1_dark;
 
     fieldset {
         border: 0;
@@ -16,8 +16,8 @@
     input[type=number],
     textarea {
         border: 0;
-        background: rgba(255,255,255,0.3);
-        padding: 0.2em 0.4em;
+        background: rgba(255,255,255,0.5);
+        padding: 0.5em 0.4em;
         display: inline-block;
         box-sizing: border-box;
         width: 50%;
@@ -25,11 +25,15 @@
         color: inherit;
         appearance: textfield;
         font-size: 0.8em;
+        transition: background-color 0.25s;
 
         &:focus {
             outline: 0;
             background: white;
             color: $color4;
+        }
+        &.t-full {
+            width: 100%;
         }
     }
     textarea {
@@ -67,6 +71,72 @@
             font-weight: bold;
             border-width: 3px;
         }
+    }
+
+    [disabled] {
+        opacity: 0.4;
+    }
+
+    // loading
+    progress {
+        position: absolute;
+        position: fixed;
+        display: block;
+
+        border: 0;
+        color: $color1;
+
+        bottom: 10px;
+        right: 10px;
+        width: 1em;
+        height: 1em;
+
+        transition: opacity 0.3s;
+
+        &.t-on {
+            opacity: 1;
+        }
+        display: none;
+    }
+    progress + .html-icon {
+        font-family: 'andr3-icos';
+        position: fixed;
+        bottom: 50%;
+        right: 10px;
+        margin-bottom: -0.5em;
+        display: block;
+        width: 1em;
+        height: 1em;
+        line-height: 1;
+        animation: rotating 0.5s infinite;
+        animation-timing-function: linear;
+        transform: rotate(0deg);
+        transform-origin: 50% 50%;
+        transition: opacity 0.5s;
+        font-size: 2em;
+    }            
+    progress.t-on + .html-icon {
+        animation-iteration-count: infinite;
+    }
+    progress.t-off + .html-icon {
+        animation-iteration-count: 1;
+        opacity: 0;
+    }
+    progress[aria-hidden=true] + .html-icon {
+        display: none;
+    }
+}
+
+@keyframes rotating {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(180deg)
+                    scale(1.1,1.1);
+    }
+    100% {
+        transform: rotate(360deg);
     }
 }
 

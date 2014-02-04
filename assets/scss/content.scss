@@ -108,6 +108,9 @@ main {
                 text-align: inherit;                
             }
         }
+        blockquote.quote {
+            text-align: center;
+        }
     }
     > .pillow {
         > p:first-of-type:first-letter {
@@ -187,7 +190,6 @@ main {
         box-sizing: border-box;
         text-align: center;
         padding-right: 1.5%;
-        color: darkgoldenrod;
 
         line-height: 1;
         margin-bottom: 2em;
@@ -224,33 +226,43 @@ main {
 }
 
 .list-of-links {
+    padding-top: 1.5em;
+
     a {
         padding: 1em 0;
-        background: $color1;
-        color: white;
+        background: $color1_light;
+        color: $color3;
         text-indent: 0;
         overflow: visible;
         width: 100%;
         height: auto;
         font-family: inherit;
         display: block;
+        position: relative;
+        z-index: 2;
 
         text-align: center;
         position: relative;
         padding-top: 4em;
         transition: background 0.3s,
+                    border-color 0.3s,
                     color 0.3s;
-        border: 3px solid $color1;
+        border: 3px solid $color1_light;
 
 
         &:hover {
-            background: #eee;
-            color: $color1;
+            background: $color3;
+            transition: none;
+            color: white;
+            border-color: $color3;
+
+            &:after {
+                color: rgba(255,255,255,0.5);
+            }
         }
         &:active {
-            position: relative;
-            top: 2px;
-            left: 2px;
+            background: $color1_dark;
+            color: $color3_dark;
         }
         &:after {
             content: attr(data-human-href);
@@ -261,6 +273,7 @@ main {
             text-overflow: ellipsis;
             text-align: center;
             padding: 0 0.5em;
+            text-shadow: none;
         }
         .html-icon {
             display: block;
@@ -272,12 +285,28 @@ main {
             top: 0.2em;
         }
     }
+
+    a + iframe {
+        position: absolute;
+        left: 50%;
+        top: 5px;
+        margin-left: -51px;
+        z-index: 1;
+        transition: top .5s 5s;
+    }
+    a:hover + iframe {
+        top: -25px;
+        transition: top .5s .5s;
+    }
     li {
         width: 25%;
         box-sizing: border-box;
-        margin-bottom: 0;
+        margin-bottom: -3px;
+        position: relative;
 
         &:first-child {
+            margin-top: 1em;
+
             a {
                 border-radius: 0.3em 0 0 0em;
             }
