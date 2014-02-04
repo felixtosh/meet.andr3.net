@@ -185,9 +185,7 @@ $(function () {
         event.preventDefault();
     });
 
-    $(document).on('unload', function () {
-        alert('unloading!');
-    });
+    LazyLoadingContainer.wakeAll();
 });
 
 
