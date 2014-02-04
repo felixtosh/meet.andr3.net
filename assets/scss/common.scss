@@ -796,12 +796,12 @@ header .pillow {
         margin-bottom: 3em;
 
         &:nth-child(2n) {
-            a {
+            img {
                 transform: rotate(5deg);
             }
         }
         &:nth-child(2n+1) { 
-            a {
+            img {
                 transform: rotate(-5deg);
             }
         }
@@ -815,7 +815,8 @@ header .pillow {
 
             .caption {
                 opacity: 1;
-                bottom: 110%;
+                top: 103%;
+                font-size: 0.8em;
             }
         }
         img {
@@ -830,20 +831,22 @@ header .pillow {
             display: block; 
             position: absolute;
             width: 100%;
-            top: 103%;
+            top: 10%;
             left: 0%;
             line-height: 1;
             color: $color3;
-            font-size: 0.8em;
-            transition: bottom 0.5s,
+            font-size: 0;
+            transition: top 0.5s,
                         opacity 0.25s;
 
-            opacity: 0.001;
+            opacity: 1;
             z-index: 9;
+            padding: 0 5%;
             .touch & {
                 opacity: 1;
                 width: 96%;
                 padding: 0 2%;
+                font-size: 0.8em;
             }
         }
     }

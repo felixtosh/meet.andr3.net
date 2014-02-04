@@ -186,6 +186,7 @@ $(function () {
     });
 
     LazyLoadingContainer.wakeAll();
+    LazyLoadingImage.wakeAll();
 });
 
 
