@@ -134,7 +134,7 @@ $(function () {
 
     // Boxes on/off
 
-    // Big offset
+    // Big offset (50% screen height)
     $('.intro-quote')
         .addClass('t-off')
         .waypoint(function (direction) {
@@ -142,10 +142,10 @@ $(function () {
                 .removeClass('t-off')
                 .addClass('t-on')
             ;
-        }, { offset: 400 });
+        }, { offset: screen.height * 0.5 });
     ;
 
-    // Small offset
+    // Small offset (25% screen height)
     $('.reading-modes')
         .addClass('t-off')
         .waypoint(function (direction) {
@@ -153,10 +153,41 @@ $(function () {
                 .removeClass('t-off')
                 .addClass('t-on')
             ;
-        }, { offset: 200 })
+        }, { offset: screen.height * 0.25 })
+    ;
 
+    // Turn offs (no offset)
+    $('[data-turn-off]')
+        .waypoint(function (direction) {
+            $(this.getAttribute('data-turn-off'))
+                .removeClass(direction == 'down' ? 't-on' : 't-off')
+                .addClass(direction == 'down' ? 't-off' : 't-on')
+            ;
+        }, { offset: 0 })
     // end of Boxes on/off
 
+
+    // Form submission
+    andr3.contactForm = new AsyncForm($('#frm_contact'));
+    $('#frm_contact .again button').on('click', function (event) {
+        var frm = $(this).parents('form');
+        frm.attr('data-status', 'unsubmitted');
+        frm.get(0).reset();
+        smoothScrollTo(frm);
+    });
+
+    // Anchors
+    $('.actions a[href^=#]').on('click', function (event) {
+        var targetId = $(this).attr('href');
+        smoothScrollTo($(targetId), function () { 
+            window.location.hash = targetId.replace(/^\#/, '');
+        });
+        event.preventDefault();
+    });
+
+    $(document).on('unload', function () {
+        alert('unloading!');
+    });
 });
 
 
