@@ -82,13 +82,13 @@ li {
 }
 
 a {
-    color: $color1_dark;
+    color: $color2_dark;
     text-decoration: none;
     transition: color 0.2s linear;
 
     &:focus,
     &:hover {
-        color: $color2_dark;
+        color: $color1_dark;
     }
 }
 
