@@ -373,24 +373,48 @@
                                     <a href="/build/videos/DemoTakeover-large.ogv">3.9<abbr title="Megabyte">MB</abbr>&nbsp;ogv</a>
                                 </span>
                             </figcaption>
-                            <video id="demo-takeover-video" poster="/assets/imgs/sapo.png" controls preload="metadata"
-                                class="video-js vjs-default-skin" width="570" height="300"
-                                data-setup="{}">
+                            <div class="lazyloading-container">
+                                <script type="text/plain">
+                                    <video id="demo-takeover-video" poster="/assets/imgs/sapo.png" controls preload="metadata"
+                                        class="video-js vjs-default-skin" width="570" height="321"
+                                        data-setup="{}">
 
-                                <source 
-                                    src="/build/videos/DemoTakeover-large.mp4"
-                                    type="video/mp4; codecs='avc1.64001E, mp4a.40.2'">
+                                        <source 
+                                            src="/build/videos/DemoTakeover-large.mp4"
+                                            type="video/mp4; codecs='avc1.64001E, mp4a.40.2'">
 
-                                <source 
-                                    src="/build/videos/DemoTakeover-large.webm"
-                                    type="video/webm; codecs='vp8, vorbis'">
+                                        <source 
+                                            src="/build/videos/DemoTakeover-large.webm"
+                                            type="video/webm; codecs='vp8, vorbis'">
 
-                                <source 
-                                    src="/build/videos/DemoTakeover-large.ogv"
-                                    type="video/ogg">
+                                        <source 
+                                            src="/build/videos/DemoTakeover-large.ogv"
+                                            type="video/ogg">
 
-                                <img src="/assets/imgs/sapo.png" alt="A screencast of a High-Impact Multimedia Ad Format deployed at SAPO.pt">
-                            </video>
+                                        <img src="/assets/imgs/sapo.png" alt="A screencast of a High-Impact Multimedia Ad Format deployed at SAPO.pt">
+                                    </video>
+                                </script>
+                                <noscript>
+                                    <video id="demo-takeover-video" poster="/assets/imgs/sapo.png" controls preload="metadata"
+                                        class="video-js vjs-default-skin" width="570" height="321"
+                                        data-setup="{}">
+
+                                        <source 
+                                            src="/build/videos/DemoTakeover-large.mp4"
+                                            type="video/mp4; codecs='avc1.64001E, mp4a.40.2'">
+
+                                        <source 
+                                            src="/build/videos/DemoTakeover-large.webm"
+                                            type="video/webm; codecs='vp8, vorbis'">
+
+                                        <source 
+                                            src="/build/videos/DemoTakeover-large.ogv"
+                                            type="video/ogg">
+
+                                        <img src="/assets/imgs/sapo.png" alt="A screencast of a High-Impact Multimedia Ad Format deployed at SAPO.pt">
+                                    </video>
+                                </noscript>
+                            </div>
                         </figure>
 
                         <p>He also worked closely with the sales team on defining, designing and implementing an unobtrusive commercial solution to a high-impact multimedia responsive ad format that allowed advertisers to reach audiences that were until then restricted to small almost static graphic banners (mobile formats).</p>
@@ -653,6 +677,7 @@
 
         <script src="/assets/js/ControlledAnimation.js"></script>
         <script src="/assets/js/AsyncForm.js"></script>
+        <script src="/assets/js/LazyLoadingContainer.js"></script>
         <script src="/assets/js/smoothScrollTo.function.js"></script>
         <script src="/assets/js/meetandr3.js"></script>
 
