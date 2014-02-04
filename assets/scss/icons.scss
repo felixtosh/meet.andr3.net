@@ -11,7 +11,7 @@
     font-style: normal;
 }
 
-[data-icon]
+[data-icon],
 [data-icon]:before,
 .html-icon {
     font-family: 'andr3-icos';
@@ -28,8 +28,8 @@
     direction: ltr;
 
     &[data-icon=dr3-logo] {
-        background: white url(/assets/imgs/andr3-circle.png);
         background: white url(/assets/imgs/andr3-2014.png);
+        background: white url(/assets/imgs/andr3-circle.png);
         background-size: 100%;
         padding: .25em;
         border-radius: 5em;
@@ -43,40 +43,45 @@
         color: inherit;
     }
     &[data-icon=share]:before {
-        content: '\e600'
+        content: '\e600';
     }
     &[data-icon=reddit]:before {
-        content: '\e601'
+        content: '\e601';
     }
     &[data-icon=instagram]:before {
-        content: '\e602'
+        content: '\e602';
     }
     &[data-icon=linkedin]:before {
-        content: '\e603'
+        content: '\e603';
     }
     &[data-icon=github]:before {
-        content: '\e604'
+        content: '\e604';
     }
     &[data-icon=google]:before {
-        content: '\e605'
+        content: '\e610';
     }
     &[data-icon=twitter]:before {
-        content: '\e606'
+        content: '\e606';
     }
     &[data-icon=facebook]:before {
-        content: '\e607'
+        content: '\e607';
     }
     &[data-icon=dribbble]:before {
-        content: '\e608'
+        content: '\e608';
     }
     &[data-icon=flickr]:before {
-        content: '\e609'
+        content: '\e609';
     }
     &[data-icon=lanyrd]:before {
-        content: '\e60a'
+        content: '\e60a';
     }
-
-    
-    
-
+    &[data-icon=radio-unchecked]:before {
+        content: '\e60e';
+    }
+    &[data-icon=radio-checked]:before {
+        content: '\e60f';
+    }
+    &[data-icon=loading]:before {
+        content: '\e60b';
+    }
 }
