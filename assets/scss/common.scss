@@ -597,6 +597,9 @@ header {
     .only-quick[class] {
         display: block;
     }
+    span.only-quick[class] {
+        display: inline;
+    }
     .only-semifull,
     .only-full {
         display: none;
@@ -607,7 +610,7 @@ header {
         display: block;
     }
     span.only-semifull[class] {
-        display: inline-block;
+        display: inline;
     }
     .only-quick,
     .only-full {
@@ -619,7 +622,7 @@ header {
         display: block;
     }
     span.only-full[class] {
-        display: inline-block;
+        display: inline;
     }
     .only-quick,
     .only-semifull {
