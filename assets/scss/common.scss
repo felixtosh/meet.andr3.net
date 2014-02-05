@@ -17,9 +17,11 @@
         letter-spacing: -1px;
         font-style: italic;
         line-height: 1;
+        word-spacing: -0.15em;
 
         &:before {
             content: "#";
+            
         }
     }
 }
@@ -162,7 +164,12 @@ body:after {
     [data-icon],
     h1 {
         transition: all 0.3s;
-        -moz-transition: font-size 0.3s;
+    }
+    [data-icon] {
+        transition: all 0.3s;
+        transition-property: font-size,
+                             margin-top,
+                             background-size;
     }
 }
 
