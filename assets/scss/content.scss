@@ -24,7 +24,7 @@
 
 .section--meta {
     font-size: 0.8em;
-    color: #666;
+    color: #999;
     margin-top: -1em;
 
     > ul {
@@ -86,6 +86,7 @@ main {
         h2 {
             max-width: 22.4em;
             text-align: center;
+            margin-bottom: 0.1em;
 
             .section--year {
                 float: none;
@@ -344,6 +345,9 @@ main {
     }
 }
 
+.highlighted-work strong {
+    color: #787D80;
+}
 
 .bff {
 	display: inline-block;
