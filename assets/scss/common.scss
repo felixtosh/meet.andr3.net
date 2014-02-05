@@ -157,6 +157,7 @@ body:after {
 #sticky-header {
     z-index: 1000;
     width: 100%;
+    box-sizing: border-box;
 
     [data-icon],
     h1 {

@@ -157,7 +157,21 @@ main {
                 outline: 1px solid #333;
 
                 @media (max-width: 480px) {
-                    width: 130%;
+                    width: 100%;
+                    margin-left: 0;
+                    margin-right: 0;
+                }
+            }
+            .lazyloading-container {
+                margin-left: -15%;
+                margin-right: -15%;
+                max-width: 130%;
+
+                img,
+                video {
+                    max-width: 100%;
+                    margin-left: 0;
+                    margin-right: 0;
                 }
             }
         }
