@@ -157,6 +157,7 @@ body:after {
 #sticky-header {
     z-index: 1000;
     width: 100%;
+    box-sizing: border-box;
 
     [data-icon],
     h1 {
@@ -234,6 +235,12 @@ main p {
     .pillow {
         padding: 5% 0;
         border-bottom: 2px solid $color1;
+    }
+
+    &:last-child {
+        .pillow {
+            border-bottom: 0;
+        }
     }
 }
 
@@ -501,6 +508,7 @@ header {
             display: inline-block;
             width: 100%;
             position: relative;
+            font-weight: 700;
 
             i {
                 display: inline-block;
@@ -540,6 +548,7 @@ header {
             text-align: center;
             font-size: 0.8em;
             color: rgba(0,0,0,0.4);
+            font-weight: 300;
         }
     }
 }
@@ -901,5 +910,36 @@ header .pillow {
 
         left: 0;
         opacity: 1;
+    }
+}
+
+
+
+body > footer {
+    margin: 5em 0 2em;
+    border-top: 4px double #ccc;
+    text-align: center;
+    padding-top: 1em;
+
+    small {
+        font-size: 1em;
+    }
+    .list-of {
+        li {
+            margin-right: 0.5em;
+        }
+        .separator {
+            &:before {
+                content: ' ';
+                display: block;
+            }
+            &:after {
+                content: "\00b7";
+                padding-left: 0.25em;
+            }
+        }
+        .list-of {
+            white-space: nowrap;
+        }
     }
 }
