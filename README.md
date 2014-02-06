@@ -1,7 +1,18 @@
-# You're looking under the skir-- KILT of andr3.net
+# Meet André Luís
 
-Here be dragons, Smaug-sized. You've been warned.
+Wherein lies the code behind http://meet.andr3.net
 
-## What you'll find here:
+Feel free to look around. That's how I learn stuff, too.
 
-Basically the code running the andr3.net v2013.
+If you find something out of place and care enough, create an issue. 
+
+## What if I want to use parts of this?
+
+I plan to split some parts up and create their own repos for re-use, with the respective licenses.
+
+I'll update this when that's done.
+
+
+Enjoy!
+
+@andr3
