@@ -23,12 +23,14 @@ module.exports = function (grunt) {
             },
             css: {
                 src: [
+                    "vendor/normalize-css/normalize.css",
+                    "vendor/animate.css/animate.css",
                     "build/css/base.css",
                     "build/css/common.css",
                     "build/css/content.css",
                     "build/css/forms.css",
                     "build/css/icons.css",
-                    "build/css/typography.css",
+                    "build/css/typography.css"
                 ],
                 dest: "build/css/all.css"
             }
