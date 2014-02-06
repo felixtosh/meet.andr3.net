@@ -138,13 +138,12 @@
         <main>
             <section class="intro">
 
-                <div class="reading-modes for-js pillow">
-                    <p><span class="t-light">Let's make this enjoyable.</span> You&hellip;</p>
+                <div class="reading-modes t-simpler for-js pillow">
+                    <p class="t-light">Adjust <strong>reading time</strong>, if needed.</p>
                     <ul>
-                        <li><button title="At any time, press key 1" class="button mode-quick" data-mode="quick">are in a rush <em class="key">1</em> <i></i><span>
-                        reading time: 2min</span></button></li>
-                        <li><button title="At any time, press key 2" class="button mode-semifull" data-mode="semifull">have a bit of time <em class="key">2</em> <i></i> <span>reading time: ~5min</span></button></li>
-                        <li><button title="At any time, press key 3" class="button mode-full" data-mode="full">want to read everything <em class="key">3</em> <i></i><span>reading time: ~10min</span></button></li>
+                        <li><input type="radio" name="chk-modes" id="chk-mode-quick"><label role="button" for="chk-mode-quick" title="At any time, press key 1" class="button mode-quick" data-mode="quick" data-key="1"><i></i><span>~2 min.</span></label></li>
+                        <li><input type="radio" name="chk-modes" id="chk-mode-semifull"><label role="button" for="chk-mode-semifull" title="At any time, press key 2" class="button mode-semifull" data-mode="semifull" data-key="2"><i></i><span>~5 min.</span></label></li>
+                        <li><input type="radio" name="chk-modes" id="chk-mode-full"><label role="button" for="chk-mode-full" title="At any time, press key 3" class="button mode-full" data-mode="full" data-key="3"><i></i><span>~10 min.</span></label></li>
                     </ul>
                 </div>
                 <div data-turn-off=".intro-quote">

@@ -5,6 +5,7 @@ var andr3 = {};
 ReadingModes = function (element) {
     this.element = element;
     this.element.on('click', $.proxy(this.handleClick, this));
+    this.element.siblings('input').on('focus', $.proxy(this.handleInputChange, this));
 
     this.enableKeys();
 };
@@ -32,9 +33,18 @@ $.extend(ReadingModes.prototype, {
 
         this.activate(mode);
     },
+    handleInputChange: function (event) {
+        var element = $(event.currentTarget);
+        element.prop('checked', true);
+      
+        this.activateByElement(element.next('label,button'));  
+    },
     handleClick: function (event) {
-        var element = $(event.target);
+        var element = $(event.currentTarget);
 
+        this.activateByElement(element);
+    },
+    activateByElement: function (element) {
         var mode = 'full';
         switch(element.attr('data-mode')) {
             case 'quick':
@@ -42,7 +52,6 @@ $.extend(ReadingModes.prototype, {
             case 'full':
                 mode = element.attr('data-mode');
         }
-
 
         this.activate(mode);
     },
@@ -75,11 +84,18 @@ $.extend(ReadingModes.prototype, {
         }, 1000);
     },
     activate: function (mode) {
+        // Set global state on <body>
         $('body').attr('data-reading-mode', mode);
+
+        // Activate checkbox
+        $('[data-mode=' + mode + '] input').prop('checked', true);
+
+        // Animate each itsy bitsy bit
         var bits = $('.only-' + mode);
         bits
             .addClass('animated')
         ;
+        // ALRIGHT! Enough is enough!
         setTimeout(function () {
             bits.removeClass('animated');
         }, 500);
@@ -122,7 +138,7 @@ $(function () {
 
 
     // Reading Modes
-    andr3.readingModes = new ReadingModes ($('.reading-modes'));
+    andr3.readingModes = new ReadingModes ($('.reading-modes [data-mode]'));
 
 
     // Make stuff sticky, but not if is a touch device
