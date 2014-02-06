@@ -21,7 +21,7 @@
 
         &:before {
             content: "#";
-            
+
         }
     }
 }
@@ -536,6 +536,7 @@ header {
         }
     }
 
+    label,
     button {
         position: relative;
 
@@ -556,6 +557,122 @@ header {
             font-size: 0.8em;
             color: rgba(0,0,0,0.4);
             font-weight: 300;
+        }
+    }
+
+    &.t-simpler {
+        transform: translate3d(0,0,0);
+        overflow: hidden;
+        font-size: 0.8em;
+        padding-right: 0.5em;
+
+        ul {
+            background-color: rgba(255,255,255,0.4);
+            padding: 10px 10px 14px;
+            text-align: center;
+            border-radius: 100px;
+            height: 23px;
+            max-width: 90%;
+            margin: 0 auto 16px;
+        }
+        li {
+            [data-mode] {
+                margin: 0 auto 0 0;
+            }
+            label[class] span {
+                margin-left: -14%;
+            }
+            + li {
+                [data-mode] {
+                    margin: 0 auto;
+                }
+                label[class] span {
+                    margin-left: -50%;
+                }
+                + li {
+                    [data-mode] {
+                        margin: 0 0 0 auto;
+                    }
+                    label[class] span {
+                        margin-left: -129%;
+                    }
+                    label:after {
+                        left: auto;
+                        right: 100%;
+                        margin-right: 0.5em;
+                    }
+                }
+            }
+        }
+        input {
+            position: absolute;
+            left: -9999em;
+        }
+        input:focus {
+            + label,
+            + button {
+                color: $color2_dark;
+                border-color: $color2_dark;
+                background-color: $color2_light;
+            }
+        }
+        label,
+        button {
+            width: 24px;
+            height: 24px;
+            padding: 0;
+            border-radius: 2.5em;
+            border-width: 2px;
+            position: relative;
+            display: block;
+            cursor: pointer;
+
+            &:after {
+                content: "press key " attr(data-key);
+                font-weight: 300;
+                color: #999;
+                margin-left: .5em;
+                font-size: 0.8em;
+                display: block;
+                position: absolute;
+                top: 10%;
+                left: 100%;
+                text-align: left;
+                opacity: 0.3;
+                white-space: nowrap;
+
+                .touch & {
+                    display: none;
+                }
+            }
+            span {
+                top: 180%;
+                width: 200%;
+                color: inherit;
+                font-size: 1em;
+                font-weight: bold;
+                white-space: nowrap;
+                display: inline-block;
+            }
+            i {
+                content: ' ';
+                width: 12px;
+                height: 12px;
+                border-radius: 1em;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                margin-top: -6px;
+                margin-left: -6px;
+                background-color: $color1_dark;
+                opacity: 0;
+                transition: transform 0.5s;
+                transform: scale(0,0);
+
+                &:after {
+                    display: none;
+                }
+            }
         }
     }
 }
@@ -589,6 +706,27 @@ header {
         content: '\e60f';
     }
 }
+[data-reading-mode=quick] .reading-modes.t-simpler[class] .mode-quick,
+[data-reading-mode=semifull] .reading-modes.t-simpler[class] .mode-semifull,
+[data-reading-mode=full] .reading-modes.t-simpler[class] .mode-full,
+.reading-modes.t-simpler[class] input:focus + label,
+.reading-modes.t-simpler[class] input:focus + button {
+    border-color: $color2_dark;
+    color: $color2_dark;
+    background-color: $color2_light;
+    position: relative;
+
+    i {
+        opacity: 1;
+        transform: scale(1,1);
+        background-color: $color2_dark;
+
+        &:before {
+            display: none;
+        }
+    }
+}
+
 
 .only-quick,
 .only-semifull,
@@ -733,6 +871,7 @@ header .pillow {
 			color: rgba(255,255,255,0.4);
 			text-align: center;
 		}
+        &:focus,
 		&:hover {
 			background: none;
 			color: $color1_light;

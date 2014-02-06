@@ -46,7 +46,7 @@ body:after {
     }
 }
 
-.intro .reading-modes[class] {
+.intro .reading-modes[class]:not(.t-simpler) {
     #meetandr3 & li {
         display: block;
         max-width: 300px;
@@ -127,4 +127,9 @@ body:after {
 
 #frm_sent .pillow {
     width: 80%;
+}
+
+.intro .reading-modes[class].t-simpler label:after,
+.intro .reading-modes[class].t-simpler button:after {
+    content: 'key ' attr(data-key);
 }

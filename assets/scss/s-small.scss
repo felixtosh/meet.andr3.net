@@ -35,7 +35,7 @@ header {
 	}
 }
 
-.intro .reading-modes[class] {
+.intro .reading-modes[class]:not(.t-simpler) {
     padding-right: 0.5em;
     #meetandr3 & li {
         display: block;
@@ -153,4 +153,27 @@ body:after {
 }
 #frm_sent .pillow {
     width: 90%;
+}
+
+.intro .reading-modes[class][class].t-simpler {
+    > p {
+        margin-bottom: 2em;
+        .touch & {
+            margin-bottom: 1em;
+        }
+    }
+    li {
+        label:after,
+        button:after {
+            left: -.7em;
+            right: auto;
+            margin-right: 0em;
+            top: -2.7em;
+
+        }
+    }
+    label:after,
+    button:after {
+        content: 'key ' attr(data-key);
+    }
 }
