@@ -37,3 +37,11 @@ header [data-icon] {
         font-size: 1.5em;
     }
 }
+
+.only-l[class] {
+    display: block;
+}
+span.only-l[class] {
+    display: inline;
+}
+

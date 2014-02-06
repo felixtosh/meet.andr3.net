@@ -177,3 +177,21 @@ body:after {
         content: 'key ' attr(data-key);
     }
 }
+
+.only-s[class] {
+    display: block;
+}
+span.only-s[class] {
+    display: inline;
+}
+
+body > footer { 
+    .list-of {
+        li {
+            display: block;
+            &.separator:after {
+                display: none;
+            }
+        }
+    }
+}

@@ -1072,6 +1072,7 @@ body > footer {
 
     small {
         font-size: 1em;
+        color: $color3_light;
     }
     .list-of {
         li {
@@ -1091,4 +1092,11 @@ body > footer {
             white-space: nowrap;
         }
     }
+}
+
+
+.only-s,
+.only-m,
+.only-l {
+    display: none;
 }

@@ -133,3 +133,11 @@ body:after {
 .intro .reading-modes[class].t-simpler button:after {
     content: 'key ' attr(data-key);
 }
+
+.only-m[class] {
+    display: block;
+}
+span.only-m[class] {
+    display: inline;
+}
+
