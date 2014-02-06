@@ -34,14 +34,14 @@ $.extend(ControlledAnimation.prototype, {
         if (target.length) {
             this.markAs('step-'+this.current);
 
-            console.log('Step ' + this.current + '. ' + (+((new Date().getTime() - this.start) / 1000).toFixed(2)) + 's');
+            // console.log('Step ' + this.current + '. ' + (+((new Date().getTime() - this.start) / 1000).toFixed(2)) + 's');
             target
                 .addClass(target.attr('data-animation'))
                 .addClass('animated')
             ;
             setTimeout ($.proxy(this.step, this), this.options.delay * 1000);
         } else {
-            console.log('Step ' + this.current + ' Failed! — not found.');
+            // console.log('Step ' + this.current + ' Failed! — not found.');
             this.markAs('done');
         } 
     },
