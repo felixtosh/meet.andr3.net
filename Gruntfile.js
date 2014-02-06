@@ -8,11 +8,18 @@ module.exports = function (grunt) {
         concat: {
             dist: {
                 src: [
-                    "vendor/modernizr/modernizr.js",
                     "vendor/jquery2/jquery.js",
-                    "assets/js/*.js"
+                    "vendor/sticky/jquery.sticky.js",
+                    "vendor/jquery-waypoints/waypoints.js",
+                    "assets/js/ControlledAnimation.js",
+                    "assets/js/AsyncForm.js",
+                    "assets/js/ReadingModes.js",
+                    "assets/js/LazyLoadingContainer.js",
+                    "assets/js/LazyLoadingImage.js",
+                    "assets/js/smoothScrollTo.function.js",
+                    "assets/js/meetandr3.js"
                 ],
-                dest: "build/production.js"
+                dest: "build/js/production.js"
             },
             css: {
                 src: [
@@ -21,9 +28,6 @@ module.exports = function (grunt) {
                     "build/css/content.css",
                     "build/css/forms.css",
                     "build/css/icons.css",
-                    "build/css/l-large.css",
-                    "build/css/m-medium.css",
-                    "build/css/s-small.css",
                     "build/css/typography.css",
                 ],
                 dest: "build/css/all.css"
@@ -36,8 +40,8 @@ module.exports = function (grunt) {
                 banner: '/*! <%= pkg.name %> <%= grunt.template.today("dddd, mmmm dS, yyyy, h:MM:ss TT") %> */'
             },
             build: {
-                src: "build/production.js",
-                dest: "build/production.min.js"    
+                src: "build/js/production.js",
+                dest: "build/js/production.min.js"    
             }
         },
 
@@ -48,7 +52,7 @@ module.exports = function (grunt) {
                     expand: true,                   // Enable dynamic expansion
                     cwd: 'assets/imgs/',                   // Src matches are relative to this path
                     src: ['**/*.{png,jpg,gif}'],    // Actual patterns to match
-                    dest: 'build/imgs/dist/'        // Destination path prefix
+                    dest: 'build/imgs/'        // Destination path prefix
                 }]
             }    
         },
@@ -100,6 +104,16 @@ module.exports = function (grunt) {
             },
             dist: {
                 src: 'build/css/*.css'
+            }
+        },
+
+        cssmin: {
+            minify: {
+                expand: true,
+                cwd: 'build/css/',
+                src: ['*.css', '!*.min.css'],
+                dest: 'build/css/',
+                ext: '.min.css'
             }
         },
 
@@ -155,6 +169,7 @@ module.exports = function (grunt) {
     // Load plugins
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-imagemin');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-sass');
@@ -163,5 +178,7 @@ module.exports = function (grunt) {
 
     // Specify available cmds/tasks
     grunt.registerTask('dev', ['sass', 'concat', 'autoprefixer' ]);
-    grunt.registerTask('default', ['sass', 'concat', 'autoprefixer', 'uglify', 'imagemin', ]);
+    grunt.registerTask('media', ['imagemin', 'responsive_videos' ]);
+    grunt.registerTask('default', ['sass', 'concat', 'autoprefixer', 'cssmin', 'uglify', 'imagemin']);
+
 };
