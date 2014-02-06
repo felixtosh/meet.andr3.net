@@ -792,6 +792,13 @@ header .pillow {
     z-index: 1000;
 }
 .is-sticky#site-actions-sticky-wrapper {
+    .actions {
+
+
+        .button {
+            padding-top: 0.7em;
+        }
+    }
 	.button--main {
 		border-bottom-color: rgba(0,0,0,0);
 	}
@@ -807,7 +814,7 @@ header .pillow {
 	right: 1em;
     max-height: 3em;
     .is-sticky & {
-        max-height: 2em;
+        max-height: 2.2em;
     }
     .html-icon {
         line-height: .6;
