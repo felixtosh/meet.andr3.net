@@ -956,6 +956,7 @@ header .pillow {
         margin-right: 1.5%;
         margin-bottom: 3em;
 
+        /**
         &:nth-child(2n) {
             img {
                 transform: rotate(5deg);
@@ -966,6 +967,7 @@ header .pillow {
                 transform: rotate(-5deg);
             }
         }
+        **/
     }
     a {
         display: inline-block;
@@ -973,12 +975,12 @@ header .pillow {
 
         &:hover {
             z-index: 100;
-
-            .caption {
+        }
+        .touch & .caption,
+        &:hover .caption {
                 opacity: 1;
                 top: 103%;
                 font-size: 0.8em;
-            }
         }
         img {
             display: inline-block;
