@@ -726,7 +726,10 @@ header {
         }
     }
 }
-
+/* Make the radios visibly focused */
+.reading-modes.t-simpler input:focus + label {
+    outline: 1px dotted #bbb;
+}
 
 .only-quick,
 .only-semifull,
