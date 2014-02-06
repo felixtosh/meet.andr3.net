@@ -23,11 +23,10 @@ $.extend(AsyncForm.prototype, {
         var formData = this.element.serialize();
         var url = this.element.attr('action');
 
-        $.post(url, {
+        $.ajax({
+            url: this.element.attr('action'),
+            type: 'POST',
             data: formData,
-            headers: {
-                'ajax': 'yes'
-            },
             complete: $.proxy(this.handleComplete, this),
             error: $.proxy(this.handleError, this),
             success: $.proxy(this.handleSuccess,this)
