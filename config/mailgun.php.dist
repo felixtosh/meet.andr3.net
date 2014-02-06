@@ -1,0 +1,9 @@
+<?php    
+
+    $mailgun = array (
+        'domain' => 'mailgun.andr3.net',
+        'apikey' => '',
+        'sendmail' => 'https://api.mailgun.net/v2/mailgun.andr3.net/messages'
+    );
+
+?>

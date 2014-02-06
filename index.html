@@ -2,102 +2,169 @@
 <html class="no-js">
     <head>
         <meta charset="utf-8">
-        <title>Meet andr3</title>
+        <title>Meet André Luís a.k.a. andr3 &mdash; Frontend Eng. &middot; Designer &middot; Speaker</title>
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 
+        <link rel="shortcut icon" href="/favicon.ico">
+
+        <!-- production
+        <link rel="stylesheet" href="build/css/all.min.css">
+        end of production -->
+
+        <!--  dev -->
         <link rel="stylesheet" href="/vendor/normalize-css/normalize.css">
         <link rel="stylesheet" href="/vendor/animate.css/animate.css">
         <link rel="stylesheet" href="/build/css/base.css">
         <link rel="stylesheet" href="/build/css/typography.css">
         <link rel="stylesheet" href="/build/css/common.css">
         <link rel="stylesheet" href="/build/css/icons.css">
+        <link rel="stylesheet" href="/build/css/forms.css">
         <link rel="stylesheet" href="/build/css/content.css">
 
         <link rel="stylesheet" href="/build/css/debug.css">
+        <!-- end of dev -->
 
-        <!-- production
-        <link rel="stylesheet" href="build/css/all.prefixed.css">
-        -->
+        <!-- Small -->
+        <link rel="stylesheet" href="/build/css/s-small.css" media="only screen and (max-width: 480px)">
+        <!-- Medium -->
+        <link rel="stylesheet" href="/build/css/m-medium.css" media="only screen and (min-width: 481px) and (max-width: 900px)">
+        <!-- Large -->
+        <link rel="stylesheet" href="/build/css/l-large.css" media="only screen and (min-width: 901px)">
+
 
         <script src="/vendor/modernizr/modernizr.js"></script>
 
-        <script type="text/javascript" src="//use.typekit.net/cld0xzo.js"></script>
+        <script type="text/javascript" src="//use.typekit.net/dvi6aob.js"></script>
         <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+        <script>
+            var vh = document.documentElement.clientHeight * 0.80; // 80%
+            document.write('<style>.ratio[data-ratio=one-screen][class] { min-height: ' + vh +'px; }</style>');
+        </script>
+
+        <!-- You're so meta! -->
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:site" content="@andr3">
+        <meta name="twitter:title" content="Meet... @andr3!">
+        <meta name="twitter:description" content="Available for hire (freelancer and permanent). Discover the story of the web nerd. #frontend #ux">
+        <meta name="twitter:creator" content="@andr3">
+        <meta name="twitter:image:src" content="http://meet.andr3.net/build/imgs/andr3-circle.png">
+        <meta name="twitter:domain" content="meet.andr3.net">
+
     </head>
-    <body class="vcard tk-dagny">
-<!--
-        <div class="debug">
-            <ul class="colors">
-                <li class="color color1"></li>
-                <li class="color color2"></li>
-                <li class="color color3"></li>
+    <body id="meetandr3" class="vcard" data-reading-mode="full">
 
-                <li class="color color1aux"></li>
-                <li class="color color2aux"></li>
-                <li class="color color3aux"></li>
-
-                <li class="color color1inv"></li>
-                <li class="color color2inv"></li>
-                <li class="color color3inv"></li>
-            </ul>
-            <ul class="fonts">
-                <li class="font1">The five boxing wizards jump quickly.</li>
-            </ul>
-        </div>
--->
-        <header>
+        <!--[if lt IE 9]>
+        <div class="unsupported">
             <div class="pillow">
-                <div data-icon="dr3-logo"></div>
-                <h1>
-                    <span class="fadeInDown animated">Meet</span>
-                    <span class="fn fadeInDown animated">André <span>Luís</span></span>
-                    <span class="nickname fadeInDown animated"><abbr title="also known as">aka</abbr> andr3</span>
-                </h1>
+                <h2>Hello there, old <del>timer</del> <ins>browser</ins>.</h2>
+                <p><strong>If you are seeing this, you're using <em>a very old browser</em>.</strong></p>
+                <p>You're either stuck with it (which I sympathize with) or you're just testing this to see if I've gone the extra mile to add support to this little bugger. ;-)</p>
 
-                <p class="tagline fadeInUp animated"><del>A</del> <ins>The</ins> Web Nerd</p>
+                <p>The fact is that <em>you'll still be able to browse around and read pretty much everything</em>, but much of the enhancements will be either disabled, broken or out of place. The effort increases significantly and the audience share in this kind of websites tend to be far more modern browsers.</p>
 
+                <p><strong>Were this project aimed at general population, it would have been polished to iron out the kinks for legacy browsers.</strong></p>
+
+                <p>For now, you'll have to take my word for it. Time is of the essence.</p>
+
+                <p>Cheers,</p>
+                <p class="t-light">André Luís a.k.a. andr3</p>
+            </div>
+        </div>
+        <![endif]-->
+        
+        <header>
+            <div class="pillow ratio" data-ratio="one-screen">
+                <div class="box">
+                    <div id="sticky-header" class="make-this-sticky">
+                        <div data-icon="dr3-logo"></div>
+                        <h1>
+                            <span class="animation-step-1" data-animation="fadeInDown">Meet</span>
+                            <span class="who">
+                                <span class="fn animation-step-2" data-animation="fadeIn">André <span>Luís</span></span>
+                                <span class="nickname animation-step-3" data-animation="fadeInDown"><abbr title="also known as">aka</abbr> andr3</span>
+                            </span>
+                        </h1>
+                    </div>
+
+                    <div class="header-intro animation-step-4" data-animation="fadeIn">
+                        <h2 class="assist">Introduction</h2>
+
+                        <h3>The web nerd</h3>
+                        <p>This is the tale of a <strong>nerd</strong> growing up on the <strong>web</strong>. He has an overflowing desire to build digital products that make the lives of a lot of people a bit better.</p>
+
+                        <h3>In a nutshell</h3>
+                        <ul class="tags">
+                            <li>frontend</li>
+                            <li>user-centered design</li>
+                            <li>accessibility</li>
+                            <li>webdesign</li>
+                            <li>semantics</li>
+                            <li>rwd</li>
+                            <li>futurefriendly</li>
+                        </ul>
+
+                        <p><button class="button t-discrete t-dark restart-animations">restart animations</button></p>
+                    </div>
+                </div> <!-- /.box -->
+
+                <ul id="site-actions" class="actions make-this-sticky animation-step-5" data-animation="fadeInRight">
+                    <li>
+                        <a class="button" href="#contact">
+                            <span class="button--main">Get in touch</span>
+                            <span class="button--secondary">available for hire</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="button" href="#follow">
+                            <span class="button--main">Stay in touch</span>
+                            <span class="button--secondary">all over the web</span>
+                        </a>
+                    </li>
+
+                    <!-- Disabled for now
+                    <li>
+                        <a class="button" href="mailto:me@andr3.net">
+                            <span class="button--main t-no-italic"><i class="html-icon">&#xe60c;</i></span>
+                            <span class="button--secondary">this web thingie</span>
+                        </a>
+                    </li>
+                    -->
+                </ul>
             </div>
         </header>
 
         <main>
             <section class="intro">
-                <div>
-                    <div class="pillow">
-                        <h2 class="assist">Introduction</h2>
 
-                        <p>A <abbr title="31 years old">31y old</abbr> web nerd hailing from Lisbon with an overflowing desire to build digital products that make the lives of a lot of people a bit better.</p>
-
-                        <h3>In a nutshell</h3>
-                        <ul class="tags">
-                            <li>frontend</li>
-                            <li>webdesign</li>
-                            <li>user-centered design</li>
-                            <li>accessibility</li>
-                            <li>semantics</li>
-                            <li>rwd</li>
-                            <li>futurefriendly</li>
-                        </ul>
-                    </div>
+                <div class="reading-modes t-simpler for-js pillow">
+                    <p class="t-light">Adjust <strong>reading time</strong>, if needed.</p>
+                    <ul>
+                        <li><input type="radio" name="chk-modes" id="chk-mode-quick"><label role="button" for="chk-mode-quick" title="At any time, press key 1" class="button mode-quick" data-mode="quick" data-key="1"><i></i><span>~2 min.</span></label></li>
+                        <li><input type="radio" name="chk-modes" id="chk-mode-semifull"><label role="button" for="chk-mode-semifull" title="At any time, press key 2" class="button mode-semifull" data-mode="semifull" data-key="2"><i></i><span>~5 min.</span></label></li>
+                        <li><input type="radio" name="chk-modes" id="chk-mode-full"><label role="button" for="chk-mode-full" title="At any time, press key 3" class="button mode-full" data-mode="full" data-key="3"><i></i><span>~10 min.</span></label></li>
+                    </ul>
                 </div>
-
-                <div>
-                    <div class="pillow">
-                        <blockquote class="quote t-big">
-                            <p>An engineer by training yet a designer by heart.</p>
-                            <p class="quote--sig"><small>&mdash; André</small></p>
-                        </blockquote>
-                    </div>
-                </div>
-
-                <div>
+                <div data-turn-off=".intro-quote">
                     <div class="pillow">            
 
                         <h2>The beginning</h2>
 
-                        <p>He has been in love with the web ever since he laid eyes on the wonders of the <em>bleeding edge</em> in browsing technology, back in 1998: <strong>IE 2.0</strong>. <abbr lang="webish" title="Who would have thought">Whodathunkit</abbr> he would be making a living out of what happened inside that chrome 15 years later? <em class="t-stone t-light">Certainly not that 16 years old teen, that's for sure.</em></p>
+                        <p>
+                            He has been in love with the web ever since he laid eyes on the wonders of <em>bleeding edge</em> browsing technology that was Internet Explorer 2.0.
+                            <span class="only-full">
+                                <abbr lang="webish" title="Who would have thought">Whodathunkit</abbr> he would be making a living out of what happened inside that chrome 15 years later? <em class="t-stone t-light">Certainly not that 16 years old teen, that's for sure.</em>
+                            </span>
+                        </p>
 
-                        <p>Around 2003, he stumbled upon Dan's <a href="http://simplebits.com">simplebits.com</a>. By starting to explore his blogroll, he was thrown into the world of webstandards and hasn't let go ever since (see <a href="#mentors">remote mentors</a> section). He then ended up designing and coding his homegrown blogging platform (full-stack) which powers <a href="http://andr3.net/blog/">andr3.net/blog</a> for almost a decade. Also launched the now extinct mobifeeds.net &mdash; an RSS reader for <abbr title="eXtensible Hypertext Markup Language">XHTML</abbr> mobile browsers in 2006. Later co-launched <a href="http://igive.sapo.pt" hreflang="pt">iGive</a> and DailyPhotoWall.net (extinct).</p>
+                        <p>
+                            <span class="only-full">Around 2003, he stumbled upon Dan's <a href="http://simplebits.com">simplebits.com</a>. By starting to explore his blogroll, he was thrown into the world of webstandards and hasn't let go ever since <span class="t-assist">(see <a href="#mentors">remote mentors</a> section)</span>.</span>
+                            <span class="only-semifull only-full">
+                                He <span class="only-full">then</span> ended up designing and coding his homegrown blogging platform (full-stack) which powers <a href="http://andr3.net/blog/">andr3.net/blog</a> for almost a decade. Also launched the now extinct mobifeeds.net &mdash; an RSS reader for <abbr title="eXtensible Hypertext Markup Language">XHTML</abbr> mobile browsers in 2006. Later co-launched <a href="http://igive.sapo.pt" hreflang="pt">iGive</a> and DailyPhotoWall.net (Jan. 2011 - Dec. 2011).
+                            </span>
+                        </p>
 
                         <p>But let's fast-forward to today, shall we?</p>
                     </div>
@@ -110,8 +177,53 @@
 
                         <p><strong>André is now a mature front-end engineer with an acute concern for elegant and purposeful design.</strong> Coming up with delightful solutions through a user-centred approach drives him to pursue simplicity, with enough complexity within users' effortless grasp.</p>
 
-                        <p>He's also grown quite fond of climbing onto a stage and speaking to his fellow colleagues and sharing best-practices and experiences.</p>
+                        <p class="only-semifull only-full">He's also grown quite fond of climbing onto a stage and speaking to his fellow colleagues and sharing best-practices and experiences.</p>
 
+                    </div>
+                </div>
+
+                <div>
+                    <div class="pillow">
+                        <ul class="list-of list-of-memories">
+                            <li>
+                                <a href="http://www.slideshare.net/andr3/pdf-responsive-webdesign-umahistoriadastrincheiras">
+                                    <img src="/build/imgs/slides-esad.low.jpg"
+                                         data-fullsrc="/build/imgs/slides-esad.jpg">
+                                    <span class="caption">
+                                        ESAD Web Talks: RWD from the trenches, in Portuguese
+                                    </span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="http://instagram.com/p/a_VZWFOgNt/">
+                                    <img src="/build/imgs/highlight-instagram.jpg">
+                                    <span class="caption">
+                                        Highlight from Instagram
+                                    </span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="http://10web.pt/programas/programa-1-desenvolvimento-de-front-end-andre-luis/">
+                                    <img src="/build/imgs/highlight-10web.low.jpg"
+                                         data-fullsrc="/build/imgs/highlight-10web.jpg">
+                                    <span class="caption">
+                                        André being interviewed for a podcast
+                                    </span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="http://ux.sapo.pt/3950.html">
+                                    <img src="/build/imgs/highlight-sapoux.low.jpg"
+                                         data-fullsrc="/build/imgs/highlight-sapoux.jpg">
+                                    <span class="caption">
+                                        Accessibility User Testing at SAPO
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
 
@@ -121,18 +233,8 @@
                 <div class="bridge">
                     <div class="pillow t-center">
 
-                        <h2>How did he get here?</h2>
-
-                        <p>Explore his path. <strong>Discover the web nerd.</strong></p>
+                        <p class="t-light"><em>How did he get&nbsp;here?</em></p>
           
-                        <h2 class="t-assist">Journey Guide</h2>
-                        <nav>
-                            <ul class="inline-anchors">
-                                <li><a href="#startups">Startups</a></li>
-                                <li><a href="#futurefriendly">Future Friendly</a></li>
-                                <li><a href="#quality">Quality</a></li>
-                            </ul>
-                        </nav>
                     </div>
                 </div>
 
@@ -157,14 +259,23 @@
                             </ul>
                         </div>
                         <figure class="t-wide">
-                            <img src="/assets/imgs/uniplaces.png" alt="A screenshot of Uniplaces.com">
                             <figcaption>A screenshot of Uniplaces.com</figcaption>
+                            <img class="lazyloading-image" src="/build/imgs/uniplaces.low.jpg" data-fullsrc="/build/imgs/uniplaces.jpg" alt="A screenshot of Uniplaces.com">
                         </figure>
 
                         <p>
-                            Leaping at the opportunity of being part of a young and promising team building a useful product from sunny Lisbon, André joined the early ranks of <a href="http://www.uniplaces.com">UniPlaces</a> in April 2013 to lead the front-end development and assist in proving the validity of the pivot in the business model through a user-centered effort.</p>
+                            Leaping at the opportunity of being part of a young and promising team building a useful product from sunny Lisbon,
 
-                        <p>The effort came into frution when, 7 months later, the company successfuly raised $1,000,000 from Octopus Investments, with a track record of impressive growth supported by the launch of the MVP in June and maturity over the next months.</p>
+                            <span class="only-quick">
+                                André joined UniPlaces to lead the front-end development and assist in proving the validity of the pivot in the business model through a user-centered effort.
+                            </span>
+
+                            <span class="only-semifull only-full">
+                                André joined the early ranks of <a href="http://www.uniplaces.com">UniPlaces</a> in April 2013 to lead the front-end development and assist in proving the validity of the pivot in the business model through a user-centered effort.
+                            </span>
+                        </p>
+
+                        <p><span class="only-full">The effort came into fruition when, </span>7 months later, the company successfully raised $1,000,000 from Octopus Investments, with a track record of impressive growth supported by the launch of the <abbr title="Minimum Viable Product">MVP</abbr> launched in June<span class="only-full"> and its improvements over the next months.</span></p>
 
                         <h3>About the company</h3>
 
@@ -172,10 +283,14 @@
 
                         <h3>Highlighted work</h3>
 
-                        <ol>
+                        <ol class="highlighted-work">
                             <li>
                                 <strong class="t-stone">Student Website</strong>
                                 <a href="http://www.uniplaces.com/">uniplaces.com</a>
+                            </li>
+                            <li>
+                                <strong class="t-stone">Recommended Areas</strong>
+                                <a href="http://www.uniplaces.com/london/recommended">uniplaces.com/london/recommended</a>
                             </li>
                             <li>
                                 <strong class="t-stone">UniPlaces Pattern Library</strong>
@@ -188,6 +303,8 @@
                             <li>frontend</li>
                             <li>user-centered design</li>
                             <li>ux</li>
+                            <li>lean ux</li>
+                            <li>webdesign</li>
                         </ul>
                     </div>
                 </section>
@@ -198,16 +315,16 @@
                     <div class="pillow">
 
                         <h2>
-                            <span class="section--year">2012</span>
+                            <span class="section--year">2012 <span class="section--year--to">to</span> 2013</span>
                             <span class="section--title">The Future Friendly Awakening</span>
                         </h2>
                         <div class="section--meta">
                             <ul>
                                 <li><a href="http://www.sapo.pt/">SAPO.pt</a></li>
                                 <li>
-                                    <abbr class="dtstart" title="2012">2012</abbr>
+                                    <abbr class="dtstart" title="2012">Early 2012</abbr>
                                     to
-                                    <abbr class="dtend" title="2013-04-01">March 2013</abbr>
+                                    <abbr class="dtend" title="2013-07">July 2013</abbr>
                                 </li>
                                 <li>
                                     ~300 employees
@@ -217,15 +334,59 @@
 
                         <p>André had been working at <a href="http://www.sapo.pt"><abbr title="Serviço de Apontadores POrtugueses">SAPO</abbr></a>&mdash;a local company to the likes of Yahoo!&mdash;for 4 years when he was challenged to be part of the team as Lead Front-end Engineer that would go ahead to redesign the #1 most visited website produced in Portugal: <a href="http://www.sapo.pt">www.sapo.pt</a>.</p>
 
-                        <p>With <abbr title="30 million">30M</abbr> monthly visits, its audience made it incredibly challenging to deliver not only a Responsive solution, but a future-friendly one: resolution-independent, device and browser agnostic but also usable and enjoyable. It strived to be a modern example of bleeding edge good practices but also universally accessible as much as possible.</p>
+                        <p>With roughly <abbr title="30 million">30M</abbr> monthly visits, its audience made it incredibly challenging to deliver not only a Responsive solution, but a future-friendly one: resolution-independent, device and browser agnostic but also usable and enjoyable. It strived to be a modern example of bleeding edge good practices but also universally accessible as much as possible.</p>
 
                         <figure class="t-wide">
-                            <video src="https://dl.dropboxusercontent.com/u/636550/UI/HP/Demo%20Takeover.mov" poster="/assets/imgs/sapo.png" controls>
-                                <img src="/assets/imgs/sapo.png" alt="A screencast of a High-Impact Multimedia Ad Format deployed at SAPO.pt">
-                            </video>
                             <figcaption>
-                                A screencast of a High-Impact Multimedia Ad Format created and deployed at SAPO.pt (23<abbr title="Megabyte">MB</abbr> .mov)
+                                A screencast of a High-Impact Multimedia Ad Format created and deployed at SAPO.pt (&copy; PTC/SAPO)
+                                <span class="t-stone">Available formats:
+                                    <a href="/build/videos/DemoTakeover.mov">23<abbr title="Megabyte">MB</abbr>&nbsp;mov</a> &middot;
+                                    <a href="/build/videos/DemoTakeover-large.webm">6<abbr title="Megabyte">MB</abbr>&nbsp;webm</a> &middot;
+                                    <a href="/build/videos/DemoTakeover-large.ogv">3.9<abbr title="Megabyte">MB</abbr>&nbsp;ogv</a>
+                                </span>
                             </figcaption>
+                            <div class="lazyloading-container">
+                                <script type="text/plain">
+                                    <video id="demo-takeover-video" poster="/build/imgs/sapo.jpg" controls preload="metadata"
+                                        class="video-js vjs-default-skin" width="570" height="321"
+                                        data-setup="{}">
+
+                                        <source 
+                                            src="/build/videos/DemoTakeover-large.mp4"
+                                            type="video/mp4; codecs='avc1.64001E, mp4a.40.2'">
+
+                                        <source 
+                                            src="/build/videos/DemoTakeover-large.webm"
+                                            type="video/webm; codecs='vp8, vorbis'">
+
+                                        <source 
+                                            src="/build/videos/DemoTakeover-large.ogv"
+                                            type="video/ogg">
+
+                                        <img src="/build/imgs/sapo.jpg" alt="A screencast of a High-Impact Multimedia Ad Format deployed at SAPO.pt">
+                                    </video>
+                                </script>
+                                <noscript>
+                                    <video id="demo-takeover-video" poster="/build/imgs/sapo.png" controls preload="metadata"
+                                        class="video-js vjs-default-skin" width="570" height="321"
+                                        data-setup="{}">
+
+                                        <source 
+                                            src="/build/videos/DemoTakeover-large.mp4"
+                                            type="video/mp4; codecs='avc1.64001E, mp4a.40.2'">
+
+                                        <source 
+                                            src="/build/videos/DemoTakeover-large.webm"
+                                            type="video/webm; codecs='vp8, vorbis'">
+
+                                        <source 
+                                            src="/build/videos/DemoTakeover-large.ogv"
+                                            type="video/ogg">
+
+                                        <img src="/build/imgs/sapo.png" alt="A screencast of a High-Impact Multimedia Ad Format deployed at SAPO.pt">
+                                    </video>
+                                </noscript>
+                            </div>
                         </figure>
 
                         <p>He also worked closely with the sales team on defining, designing and implementing an unobtrusive commercial solution to a high-impact multimedia responsive ad format that allowed advertisers to reach audiences that were until then restricted to small almost static graphic banners (mobile formats).</p>
@@ -236,7 +397,7 @@
 
                         <h3>Highlighted work</h3>
 
-                        <ol>
+                        <ol class="highlighted-work">
                             <li>
                                 <strong class="t-stone">Responsive Web Portal</strong>
                                 <a href="http://www.sapo.pt/">sapo.pt</a> (Ed. 2012 - now)
@@ -246,8 +407,8 @@
                                 <a href="https://dl.dropboxusercontent.com/u/636550/UI/HP/Demo%20Takeover.mov">Watch the Screencast</a> (21.3<abbr title="Megabyte">MB</abbr> video)
                             </li>
                             <li>
-                                <strong class="t-stone">Slides about the Technical Challenges (Presented at ESAD)</strong>
-                                <a hreF="http://www.slideshare.net/andr3/pdf-responsive-webdesign-umahistoriadastrincheiras">Responsive Web: A story from the Trenches</a> (in Portuguese)
+                                <strong class="t-stone">Slides about the Technical Challenges (Presented at&nbsp;<a href="http://www.esad.pt"><abbr title="Escola Superior de Artes e Design">ESAD</abbr></a>)</strong>
+                                <a href="http://www.slideshare.net/andr3/pdf-responsive-webdesign-umahistoriadastrincheiras">Responsive Web: A story from the Trenches</a> (in Portuguese)
                             </li>
                         </ol>
 
@@ -276,9 +437,9 @@
                             <ul>
                                 <li><a href="http://www.sapo.pt/">SAPO.pt</a></li>
                                 <li>
-                                    <abbr class="dtstart" title="2010">2010</abbr>
+                                    <abbr class="dtstart" title="2010-02">February 2010</abbr>
                                     to
-                                    <abbr class="dtend" title="2012">2012</abbr>
+                                    <abbr class="dtend" title="2012">Early 2012</abbr>
                                 </li>
                                 <li>
                                     ~300 employees
@@ -322,79 +483,210 @@
                 </section>
 
                 <hr>
+
+                <div class="bridge">
+                    <div class="pillow t-center">
+
+                        <p class="t-light"><em>Before this, he worked as a full-stack web developer.</p>
+                        <p class="t-light">He also got a degree in Computer Science and took the <abbr title="Certificate of Proficiency in English">CPE</abbr> from Cambridge <abbr title="English for Speakers of Other Languages">ESOL</abbr>.</em></p>
+          
+                    </div>
+                </div>
             </div> <!-- /.eras -->
 
 
-            <div id="mentors" class="extra">
+            <div id="mentors" class="extra only-full only-semifull t-assist">
                 <section class="section">
                     <div class="pillow">
-                        <p>As an avid speaker, André has shared his knowledge with others as a gesture of appreciation for the plenty remote mentors he has cherished along his path.</p>
-
-                        <p>Let's take a moment to highlight their role in this tale of web nerdery.</p>
-
                         <h2>Remote Mentors</h2>
 
+                        <p>As an avid speaker, André has tried to share with others useful knowledge as kind of a pay-it-forward thing, since he has been helped by the open sharing by plenty of remote mentors.</p>
+
+                        <p>These are the names of those who have <em>taught</em>, <em>inspired</em> and <em>shown him the&nbsp;way</em>. 
+                            <strong class="t-stone">Thank you for everything.</strong>
+                            <span class="t-stone t-light">By the way, these are not endorsements.</span>
+                        </p>
 
                         <ul class="list-of-mentors">
-                            <li>Dan Cederholm</li>
-                            <li>Jeffrey Zeldman</li>
-                            <li>Jeremy Keith</li>
-                            <li>John Hicks</li>
-                            <li>Doug Bowman</li>
-                            <li>Ethan Marcotte</li>
-                            <li>Molly Holzschlag</li>
-                            <li>Dunstan Orchard</li>
-                            <li>Dave Shea</li>
-                            <li>Tantek Çelik</li>
-                            <li>Elliot Jay Stocks</li>
-                            <li>Hugo Baeta</li>
-                            <li>Bryan Veloso</li>
-                            <li>Rui Lopes</li>
-                            <li>Simon Collison</li>
-                            <li>Jason Santa Maria</li>
-                            <li>Richard Rutter</li>
-                            <li>Chris Murphy</li>
-                            <li>Nicklas Persson</li>
-                            <li>Lea Verou</li>
-                            <li>Gustavo Pimenta</li>
-                            <li>Wilson Miner</li>
-                            <li>Paulo Zoom</li>
-                            <li>Dan Rubin</li>
-                            <li>Andy Clarke</li>
-                            <li>Brian Suda</li>
-                            <li>Robert Bringhurst</li>
-                            <li>Jon Tangerine</li>
-                            <li>Tiago Pedras</li>
-                            <li>Daniel Burka</li>
-                            <li>And some more...</li>
+                            <li><span>Dan</span> Cederholm</li>
+                            <li><span>Jeffrey</span> Zeldman</li>
+                            <li><span>Jeremy</span> Keith</li>
+                            <li><span>John</span> Hicks</li>
+                            <li><span>Doug</span> Bowman</li>
+                            <li><span>Ethan</span> Marcotte</li>
+                            <li><span>Molly</span> Holzschlag</li>
+                            <li><span>Dunstan</span> Orchard</li>
+                            <li><span>Dave</span> Shea</li>
+                            <li><span>Tantek</span> Çelik</li>
+                            <li><span>Elliot</span> Jay Stocks</li>
+                            <li><span>Hugo</span> Baeta</li>
+                            <li><span>Bryan</span> Veloso</li>
+                            <li><span>Rui</span> Lopes</li>
+                            <li><span>Jonathan</span> Snook</li>
+                            <li><span>Simon</span> Collison</li>
+                            <li><span>Jason</span> Santa Maria</li>
+                            <li><span>Richard</span> Rutter</li>
+                            <li><span>Chris</span> Murphy</li>
+                            <li><span>Nicklas</span> Persson</li>
+                            <li><span>Lea</span> Verou</li>
+                            <li><span>Gustavo</span> Pimenta</li>
+                            <li><span>Wilson</span> Miner</li>
+                            <li><span>Paulo</span> Zoom/Pereira</li>
+                            <li><span>Dan</span> Rubin</li>
+                            <li><span>Andy</span> Clarke</li>
+                            <li><span>Brian</span> Suda</li>
+                            <li><span>Robert</span> Bringhurst</li>
+                            <li><span>Jon</span> Tangerine</li>
+                            <li><span>Tiago</span> Pedras</li>
+                            <li><span>Daniel</span> Burka</li>
                         </ul>
+
+                        <p>If your name is up there, you have been a major influence on André's work.</p>
                     </div>
                 </section>
             </div>
         </main>
 
+        <div class="footer-summary">
+            <div id="contact" class="contact">
+                <form id="frm_contact" class="form" action="./contact" method="post">
+                    <div class="pillow" id="frm_submission">
+                        <h2>Get in touch</h2>
+                        <p>Whether you just want to say <q>Hi</q> or you have a question or business proposition, hit him&nbsp;up.</p>
+
+                        <fieldset>
+                            <legend class="t-assist">Your message</legend>
+
+                            <p class="field">
+                                <label for="message">
+                                    <span class="field--label" data-required>What's on your mind?</span>
+                                    <textarea required id="message" name="message" placeholder="Say your piece here&hellip;"></textarea>
+                                </label>
+                            </p>
+
+                            <p class="field">
+                                <label for="subject">
+                                    <span class="field--label">Reason</span>
+                                    <input class="t-full" type="text" id="subject" name="subject" placeholder="Why are you reaching him?">
+                                </label>
+                            </p>
+                        </fieldset>
+                        <fieldset class="submitter">
+                            <legend class="t-assist">Who might you be?</legend>
+
+                            <p class="field">
+                                <label for="who">
+                                    <span class="field--label">Your name</span>
+                                    <input class="t-full" type="text" id="who" name="who">
+                                </label>
+                            </p>
+
+                            <p class="field">
+                                <label for="who_contact">
+                                    <span class="field--label">Some sort of contact</span>
+                                    <input class="t-full" type="text" id="who_contact" name="who_contact" placeholder="">
+                                    <span class="field--help">An email address or something he can use to reply.</span>
+                                </label>
+                            </p>
+                        </fieldset>
+                        <p class="buttons">
+                            <button type="submit" class="button">
+                                Send it
+                            </button>
+                        </p>
+                    </div>
+                    <div id="frm_sent" data-for-status="saved" aria-hidden="true">
+                        <div class="pillow">
+                            <div>
+                                <h2>Thank you! He's got your message</h2>
+                                <p>He'll get back to you as soon as possible.</p>
+
+                                <div class="again">
+                                    <p class="t-light">Forgot something?</p>
+                                    <p><button type="button" class="button">Send another!</button></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div id="follow">
+                <div class="pillow">
+                    <h2>Stay in touch</h2>
+                    <p>He can be found on pretty much every online service out there, but these are the popular online water coolers.</p>
+
+                    <ul class="list-of list-of-links">
+                        <li id="twitter"><a rel="me" href="http://twitter.com/andr3" data-human-href="twitter.com/andr3"><i class="html-icon">&#xe606;</i>twitter</a>
+                            <a href="https://twitter.com/andr3" class="twitter-follow-button" data-show-count="false">Follow @andr3</a>
+                            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+                        </li>
+                        <li id="github"><a rel="me" href="http://github.com/andr3pt" data-human-href="github.com/andr3pt"><i class="html-icon">&#xe604;</i>GitHub</a></li>
+                        <li id="linkedin"><a rel="me" href="http://linkedin.com/in/andr3" data-human-href="linkedin.com/in/andr3"><i class="html-icon">&#xe603;</i>LinkedIn</a></li>
+                        <li id="lanyrd"><a rel="me" href="http://lanyrd.com/profile/andr3/" data-human-href="lanyrd.com/profile/andr3"><i class="html-icon">&#xe60a;</i>Lanyrd</a></li>
+                        <li id="dribbble"><a rel="me" href="http://dribbble.com/players/andr3" data-human-href="dribbble.com/players/andr3"><i class="html-icon">&#xe608;</i>dribbble</a></li>
+                        <li id="flickr"><a rel="me" href="http://flickr.com/photos/andr3/" data-human-href="flickr.com/photos/andr3"><i class="html-icon">&#xe609;</i>flickr</a></li>
+                        <li id="instagram"><a rel="me" href="http://instagram.com/andr3/" data-human-href="instagram.com/andr3"><i class="html-icon">&#xe602;</i>Instagram</a></li>
+                        <li id="facebook"><a rel="me" href="http://facebook.com/andreluis" data-human-href="facebook.com/andreluis"><i class="html-icon">&#xe607;</i>facebook</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
         <footer>
             <div class="pillow">
-                <p>
-                    <small>
-                        &copy; 
-                        <abbr title="Creative Commons Attribution Non-commercial Share-alike">
-                            cc-by-nc-sa
-                        </abbr>
-                        &middot; Some rights reserved &middot; <a href="./">André Luís</a>
-                        &mdash;
-                        <a href="https://typekit.com/colophons/cld0xzo">Colophon</a>
-                    </small>
-                </p>
+                <ul class="list-of">
+                    <li>
+                        <small>
+                            <abbr title="Creative Commons Attribution Non-commercial Share-alike">
+                                cc-by-nc-sa
+                            </abbr>
+                            Some rights reserved.
+                        </small>
+                    </li>
+                    <li>
+                        <ul class="list-of">
+                            <li class="separator">
+                                <em>Handcrafted <span class="only-m only-l">in Lisbon</span> by <a class="email" href="mailto:me@andr3.net">André Luís</a></em>
+                            </li>
+                            <li>
+                                <a href="https://typekit.com/colophons/dvi6aob">Colophon</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
             </div>
         </footer>
-        
-        <!-- Production 
-        <script src="/build/production.min.js"></script>
-        -->
 
-        <script src="/vendor/jquery2/jquery.js"></script>
-        <script src="/vendor/stickem/jquery.stickem.js"></script>
-        <script src="/assets/js/meetandr3.js">
+
+        <!-- Production
+        <script src="//code.jquery.com/jquery-2.1.0.min.js"></script>
+        <script src="/build/js/production.min.js"></script>
+        end of production -->
+        
+        <!-- dev -->
+
+        <script src="//code.jquery.com/jquery-2.1.0.min.js"></script>
+        <script src="/vendor/sticky/jquery.sticky.js"></script>
+        <script src="/vendor/jquery-waypoints/waypoints.js"></script>
+
+        <script src="/assets/js/ControlledAnimation.js"></script>
+        <script src="/assets/js/AsyncForm.js"></script>
+        <script src="/assets/js/ReadingModes.js"></script>
+        <script src="/assets/js/LazyLoadingContainer.js"></script>
+        <script src="/assets/js/LazyLoadingImage.js"></script>
+        <script src="/assets/js/smoothScrollTo.function.js"></script>
+        <script src="/assets/js/meetandr3.js"></script>
+        <!-- end of dev -->
+
+        <!-- ga -->
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-47805326-1', 'andr3.net');
+          ga('send', 'pageview');
+        </script>
     </body>
 </html>

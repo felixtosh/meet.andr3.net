@@ -7,7 +7,7 @@
 }
 
 ::selection {
-    background: $color1;
+    background: $color1_dark;
     color: white;
     text-shadow: none;
 
@@ -37,7 +37,7 @@ hr {
 body {
     line-height: 1.5;
     font-size: 1.2rem;
-    color: #222;
+    color: $color3;
     overflow-x: hidden;
 
     @media (min-width: 480px) {
@@ -82,13 +82,13 @@ li {
 }
 
 a {
-    color: $color1;
+    color: $color1_dark;
     text-decoration: none;
     transition: color 0.2s linear;
 
     &:focus,
     &:hover {
-        color: $color3;
+        color: $color2_dark;
     }
 }
 
@@ -96,7 +96,7 @@ h2,
 h3,
 h4 {
     margin-bottom: 0.5em;
-    color: $color3;
+    color: $color4;
     line-height: .9;
 }
 
@@ -114,4 +114,8 @@ img,
 video,
 object {
     max-width: 100%;
+}
+
+abbr[title] {
+	cursor: help;
 }

@@ -1,0 +1,47 @@
+body:before {
+    content: 'L';
+    padding: 0.2em 1em;
+    font-size: 0.7em;
+    font-weight: bold;
+    background: rgba(255,255,255,0.8);
+    color: black;
+    position: fixed;
+    bottom: 0;
+    right: 0;   
+}
+
+
+header [data-icon] {
+	margin-left: -1.3em;
+}
+
+@media 	only screen and (-webkit-min-device-pixel-ratio: 1.5) and (min-width: 713px),
+		only screen and (-o-min-device-pixel-ratio: 3/2) and (min-width: 713px),
+		only screen and (min-device-pixel-ratio: 1.5) and (min-width: 713px) {
+	.section figure.t-wide img, 
+	.section figure.t-wide video {
+		max-width: 570px;
+		margin: 0 auto;
+		display: block;
+	}
+}
+
+.is-sticky #sticky-header {
+    [data-icon=dr3-logo] {
+        font-size: 3.3em;
+        margin-top: -0.2em;
+        background-size: 150%;
+        background-position: 64% -7%;
+    }
+    h1 {
+        font-size: 1.5em;
+    }
+}
+
+.only-l[class] {
+    display: block;
+}
+span.only-l[class] {
+    display: inline;
+}
+
