@@ -56,11 +56,7 @@ END;
     curl_setopt_array($s, $options);
     $result = curl_exec($s);
 
-    $headers = getallheaders();
-
-    if (!empty($headers['X-Requested-With']) && 
-        $headers['X-Requested-With'] == 'XMLHttpRequest') {
-
+    if (is_array($_POST['headers'])) {
         header('Content-type: application/json;');
         echo json_encode($result);
     } else {
