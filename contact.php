@@ -36,10 +36,10 @@ END;
     $to = "me@andr3.net";
     $subject = safe(!empty($_POST['subject']) ? $_POST['subject'] : '(blank)');
     $msg = safe(!empty($_POST['message']) ? $_POST['message'] : '(blank)');
+    $who = safe($_POST['who']) . " ( " . safe($_POST['who_contact']) . " )";
 
-    $msg = $msg . getMessageSuffix();
+    $msg = $who . "\r\n\r\n" . $msg . getMessageSuffix() . print_r($_POST, true);
    
-
     $s = curl_init(); 
     $options = array (
         CURLOPT_USERPWD => 'api:' . $mailgun['apikey'],
@@ -56,7 +56,7 @@ END;
     curl_setopt_array($s, $options);
     $result = curl_exec($s);
 
-    if (is_array($_POST['headers'])) {
+    if ($_SERVER['HTTP_X_REQUESTED_WITH'] == 'XMLHttpRequest') {
         header('Content-type: application/json;');
         echo json_encode($result);
     } else {
