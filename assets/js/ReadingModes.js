@@ -4,6 +4,7 @@ ReadingModes = function (element) {
     this.element.siblings('input').on('focus', $.proxy(this.handleInputChange, this));
 
     this.enableKeys();
+    this.activate('full', {animate: false}); // default
 };
 
 $.extend(ReadingModes.prototype, {
@@ -79,21 +80,25 @@ $.extend(ReadingModes.prototype, {
             ;
         }, 1000);
     },
-    activate: function (mode) {
+    activate: function (mode, options) {
         // Set global state on <body>
         $('body').attr('data-reading-mode', mode);
 
         // Activate checkbox
         $('[data-mode=' + mode + '] input').prop('checked', true);
 
-        // Animate each itsy bitsy bit
-        var bits = $('.only-' + mode);
-        bits
-            .addClass('animated')
-        ;
-        // ALRIGHT! Enough is enough!
-        setTimeout(function () {
-            bits.removeClass('animated');
-        }, 500);
+        if (typeof options == 'undefined' ||
+            (options && options.animate === true) ) {
+
+            // Animate each itsy bitsy bit
+            var bits = $('.only-' + mode);
+            bits
+                .addClass('animated')
+            ;
+            // ALRIGHT! Enough is enough!
+            setTimeout(function () {
+                bits.removeClass('animated');
+            }, 500);
+        }
     }
 });
