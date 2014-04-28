@@ -33,6 +33,7 @@ $details
 END;
     }
 
+if ($_POST['email'] == '' || $_POST['email'] != '' && strtolower(trim($_POST['email'])) == 'yes') {
     $to = "me@andr3.net";
     $subject = safe(!empty($_POST['subject']) ? $_POST['subject'] : '(blank)');
     $msg = safe(!empty($_POST['message']) ? $_POST['message'] : '(blank)');
@@ -56,12 +57,15 @@ END;
     curl_setopt_array($s, $options);
     $result = curl_exec($s);
 
-    if ($_SERVER['HTTP_X_REQUESTED_WITH'] == 'XMLHttpRequest') {
+} else {
+    $result = false;
+} // if
+    
+    if (true) {
         header('Content-type: application/json;');
         echo json_encode($result);
     } else {
         include 'index.html';
     }
-    
 
 ?>
