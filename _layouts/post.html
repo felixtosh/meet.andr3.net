@@ -1,0 +1,14 @@
+---
+layout: default
+---
+
+{% include nav.md %}
+
+<article class="content hentry">
+    <h2 class="entry-title">{{ page.title }}</h2>
+    <p><span class="meta">{% for category in page.categories %} #{{category}} {% endfor %}</p>
+
+    <div class="post entry-content">
+    {{ content }}
+    </div>
+</article>

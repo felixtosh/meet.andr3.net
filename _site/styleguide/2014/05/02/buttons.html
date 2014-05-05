@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Buttons</title>
+        <meta name="viewport" content="width=device-width">
+
+        <!-- syntax highlighting CSS -->
+        <link rel="stylesheet" href="/css/syntax.css">
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="/css/main.css">
+        <link rel="stylesheet" href="/css/seedrs-styleguide.css">
+
+        <!-- Imports from seedrs.com -->
+        <link rel="stylesheet" href="http://www.seedrs.com/assets/base-758afe604b6b838604cb292f0713c208.css">
+
+        <script src="//use.typekit.com/gmd7txr.js" type="text/javascript"></script>
+        <script type="text/javascript">
+        //<![CDATA[
+        try{Typekit.load();}catch(e){}
+        //]]>
+        </script>
+        <!-- end of imports -->
+
+    </head>
+    <body class="" id="page">
+
+        <div class="site">
+          <div class="header">
+            <h1 class="title"><a href="/">Styleguide for Seedrs.com</a></h1>
+          </div>
+
+          <nav class="navigation" role="navigation">
+
+<!--
+  Table of Contents. 
+  Edit online between START and END 
+-->
+
+<!-- START -->
+
+<ol>
+<li><a href="/styleguide%20identity%20brand/2014/05/02/identity.html">Identity</a></li>
+<li>Markup
+
+<ol>
+<li><a href="/markup_and_templates/2014/04/30/welcome-to-jekyll.html">Markup and Templates: Setup</a></li>
+<li><a href="/markup_and_templates/2014/04/30/markup-rails.html">Markup and Templates: Rails</a></li>
+<li>Components</li>
+<li><a href="/styleguide/2014/05/02/buttons.html">Buttons</a></li>
+</ol></li>
+</ol>
+
+<!-- END -->
+
+
+<div class="all-pages-dump">
+  <details>
+    <summary>All pages</summary>
+    <ul>
+      
+      <li>
+        <a href="/markup_and_templates/2014/04/30/markup-rails.html">
+          Markup and Templates: Rails
+        </a>
+      </li>
+      
+      <li>
+        <a href="/markup_and_templates/2014/04/30/welcome-to-jekyll.html">
+          Markup and Templates: Setup
+        </a>
+      </li>
+      
+      <li>
+        <a href="/styleguide/2014/05/02/buttons.html">
+          Buttons
+        </a>
+      </li>
+      
+      <li>
+        <a href="/identity/2014/05/02/identity.html">
+          Identity
+        </a>
+      </li>
+      
+    </ul>
+
+  </details>
+</div>
+
+</nav><!-- /nav -->
+
+
+<article class="content hentry">
+    <h2 class="entry-title">Buttons</h2>
+    <p><span class="meta"> #styleguide </p>
+
+    <div class="post entry-content">
+    <h2>Buttons</h2>
+
+<p>These are your options for buttons.
+<strong>Base class:</strong> <code>.button</code></p>
+
+<h3>Using the &lt;a&gt; element</h3>
+
+<div class="example">
+
+<a href="/" class="button">Just a button</a>
+<a href="/" class="button primary">A primary button</a>
+<a href="/" class="button primary_strong">A primary strong button</a>
+ 
+</div>
+
+<div class="example-code">
+
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;/&quot;</span> <span class="na">class=</span><span class="s">&quot;button&quot;</span><span class="nt">&gt;</span>Just a button<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;/&quot;</span> <span class="na">class=</span><span class="s">&quot;button primary&quot;</span><span class="nt">&gt;</span>A primary button<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;/&quot;</span> <span class="na">class=</span><span class="s">&quot;button primary_strong&quot;</span><span class="nt">&gt;</span>A primary strong button<span class="nt">&lt;/a&gt;</span>
+</code></pre></div>
+
+</div>
+
+<h3>Using the &lt;input&gt; element</h3>
+
+<div class="example">
+
+<input type="button" class="button" value="Just a button">
+<input type="button" class="button primary" value="A primary button">
+<input type="button" class="button primary_strong" value="A primary strong button">
+<input type="button" class="button cancel" value="A cancel button">
+ 
+</div>
+
+<div class="example-code">
+
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;button&quot;</span> <span class="na">class=</span><span class="s">&quot;button&quot;</span> <span class="na">value=</span><span class="s">&quot;Just a button&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;button&quot;</span> <span class="na">class=</span><span class="s">&quot;button primary&quot;</span> <span class="na">value=</span><span class="s">&quot;A primary button&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;button&quot;</span> <span class="na">class=</span><span class="s">&quot;button primary_strong&quot;</span> <span class="na">value=</span><span class="s">&quot;A primary strong button&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;button&quot;</span> <span class="na">class=</span><span class="s">&quot;button cancel&quot;</span> <span class="na">value=</span><span class="s">&quot;A cancel button&quot;</span><span class="nt">&gt;</span>
+</code></pre></div>
+
+</div>
+
+<h3>Other options</h3>
+
+<p>(ToDo)</p>
+
+    </div>
+</article>
+
+          <div class="footer">
+            <div class="contact">
+              <p>
+                Seedrs<br />
+                support@seedrs.com
+              </p>
+            </div>
+            <div class="contact">
+              <p>
+                <a href="https://github.com/seedrs">github.com/seedrs</a><br />
+                <a href="https://twitter.com/seedrs">twitter.com/seedrs</a><br />
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <script src="js/app.js"></script>
+
+    </body>
+</html>

@@ -1,0 +1,23 @@
+callback([
+
+  {
+    "text": "Markup and Templates: Rails",
+    "href": "/markup_and_templates/2014/04/30/markup-rails.html"
+  } ,
+
+  {
+    "text": "Markup and Templates: Setup",
+    "href": "/markup_and_templates/2014/04/30/welcome-to-jekyll.html"
+  } ,
+
+  {
+    "text": "Buttons",
+    "href": "/styleguide/2014/05/02/buttons.html"
+  } ,
+
+  {
+    "text": "Identity",
+    "href": "/identity/2014/05/02/identity.html"
+  } 
+
+])
